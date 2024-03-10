@@ -33,7 +33,7 @@ function HomePage() {
                     </div>
                     <a href="https://www.linkedin.com/in/abhijit-karmakar-009ab026b/"><Button text={"Contact Me"} /></a>
                 </div>
-                <img src={"./img/me4.png"} className="me bouncer" alt="me" />
+                <img src={"assets/me4.png"} className="me bouncer" alt="me" />
             </div>
         </div>
     );

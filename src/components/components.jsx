@@ -59,7 +59,8 @@ export function Button({ text }) {
 export function ProjectCard({ pic, heading, description, link, gitlink, techs }) {
     return (
         <div className="project-card">
-            <a className="project-link" href={link} alt=""><div className="project-img bouncer" style={{ background: `url("src/assets/${pic}")` }}></div></a>
+            <a className="project-link" href={link} alt="">
+                <div className="project-img bouncer" style={{ background: `url("src/assets/${pic}")` }}></div></a>
             <div className="proj-title">
                 <div className="hiderx"></div>
                 <div className="bouncer">

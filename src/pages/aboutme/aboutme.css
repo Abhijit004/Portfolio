@@ -1,0 +1,89 @@
+.about-me {
+    /* margin-top: 12rem; */
+    gap: 2rem;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem 0rem;
+}
+
+.heading * {
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+
+.about-content  p {
+    padding-top: 1rem;
+    font-weight: 300;
+}
+
+.tech-stack {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tech-stack .heading * {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.tech-list {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.tech {
+    width: 4rem;
+    height: 4rem;
+}
+
+.about-desc p {
+    width: 60ch;
+}
+
+.about-desc {
+    font-weight: 200;
+}
+
+.heading,
+.para {
+    position: relative;
+}
+
+.para {
+    margin-top: 1rem;
+}
+
+.tech {
+    transform: rotate(360deg) scale(0);
+    transition: all 1s ease-out;
+}
+
+.tech-showup {
+    transform: rotate(0deg) scale(1);
+}
+
+p {
+    position: relative;
+}
+
+@media screen and (max-width: 1200px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-desc p {
+        width: 100%;
+    }
+}

@@ -1,0 +1,93 @@
+import React, { useEffect, useRef } from "react";
+import "./aboutme.css";
+import * as SVG from "../../assets/svgvectors";
+
+function AboutMe() {
+    const observer = useRef(null);
+
+    useEffect(() => {
+        // Initialize IntersectionObserver when the component mounts
+        observer.current = new IntersectionObserver(slider, { threshold: 0.5 });
+
+        // Fetching all boxes and setting them on observe by the observer object
+        const boxes = document.querySelectorAll(".tech");
+        boxes.forEach((box) => {
+            observer.current.observe(box);
+        });
+
+        return () => {
+            observer.current.disconnect();
+        };
+    }, []); 
+
+    const slider = (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("tech-showup");
+            }
+        });
+    };
+    return (
+        <div className="about-me">
+            <div>
+                <div className="heading bouncer">
+                    <div className="hiderx"></div>
+                    <span>About</span>
+                    <span style={{ color: "var(--themecol)" }}> Me</span>
+                    <div className="line-r"></div>
+                </div>
+                <div className="about-content">
+                    <div className="about-desc">
+                        <div className="para">
+                            <div className="hiderx"></div>
+                            <p className="bouncer">
+                                I am currently pursuing a B.Tech(UG) course in Information Technology from IIEST, Shibpur. Currently I am in my 2nd year, looking for oppurtunities to enhance my skills and learn new technologies
+                            </p>
+                        </div>
+                        <div className="para">
+                            <div className="hiderx"></div>
+                            <p className="bouncer">
+                                I am a passionate, self taught web developer with a good UI/UX designing skills. I primarily use figma for all kinds of brainstorming. Currently, I use React as the Javascript Framework for my projects, however aiming to add more in my armour.
+                            </p>
+                        </div>
+                        <div className="para">
+                            <div className="hiderx"></div>
+                            <p className="bouncer">
+                            Apart from web development, I am also passionate about competitive programming. Till now, I have given many contests across popular platforms. I primarily use Python for its super easy syntax.
+                            </p>
+                        </div>
+                    </div>
+                    <div className="tech-stack">
+                        <div className="heading">
+                            <div className="hiderx"></div>
+                            <div className="bouncer">
+                                <span>What I</span>
+                                <span style={{ color: "var(--themecol)" }}> Love</span>
+                            </div>
+                        </div>
+                        <div className="tech-list">
+                            <SVG.HTML cls = "tech" color= {"#fff"}/>
+                            <SVG.CSS cls = "tech" color= {"var(--themecol)"}/>
+                            <SVG.JS cls = "tech" color= {"#fff"}/>
+                            <SVG.Nodejs cls = "tech" color= {"var(--themecol)"}/>
+                            <SVG.React_ cls = "tech" color= {"#fff"}/>
+                            <SVG.Python cls = "tech" color= {"var(--themecol)"}/>
+                            <SVG.C cls = "tech"/>
+                            <SVG.Java cls = "tech" color= {"var(--themecol)"}/>
+                            <SVG.DBMS cls = "tech" color= {"#fff"}/>
+                            <SVG.SQL cls = "tech" color= {"var(--themecol)"}/>
+                            <SVG.Git cls = "tech" color= {"#fff"}/>
+                            <SVG.Github cls = "tech" color= {"var(--themecol)"}/>
+                            <SVG.MUI cls = "tech" color= {"#fff"}/>
+                            <SVG.Canva cls = "tech" color= {"var(--themecol)"}/>
+                            <SVG.Figma cls = "tech" color= {"#fff"}/>
+                            <SVG.Chartjs cls = "tech" color= {"#fff"}/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+export default AboutMe;

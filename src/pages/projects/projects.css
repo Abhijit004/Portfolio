@@ -1,0 +1,41 @@
+
+
+.proj-logo {
+    width: 3rem;
+    height: 3rem;
+}
+
+.project-list {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+@media screen and (max-width: 800px) {
+    .project-card {
+        width: 100%;
+    }
+}
+
+.project-img::before {
+    content: "Live Demo";
+    font-size: 2rem;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.662);
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+    border-radius: 10px;
+}
+
+.project-img:hover::before {
+    opacity: 1;
+    cursor: pointer;
+}

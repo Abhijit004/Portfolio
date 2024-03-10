@@ -48,7 +48,7 @@ function Projects() {
                     pic={"proj-portfolio.jpg"}
                     heading={"Portfolio"}
                     description={portfolio}
-                    link={"https://portfolio-liard-rho-16.vercel.app/"}
+                    link={"https://abhijit-karmakar.vercel.app/"}
                     gitlink={"https://github.com/Abhijit004/Weather-App"}
                 />
             </div>

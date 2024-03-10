@@ -59,7 +59,7 @@ export function Button({ text }) {
 export function ProjectCard({ pic, heading, description, link, gitlink, techs }) {
     return (
         <div className="project-card">
-            <a className="project-link" href={link} alt="">
+            <a className="project-link" href={link} alt="" aria-label="project-link">
                 <div className="project-img bouncer" style={{ background: `url("assets/${pic}")` }}></div></a>
             <div className="proj-title">
                 <div className="hiderx"></div>
@@ -166,23 +166,23 @@ export function Header() {
         <div className="header-wrapper">
             <div className="header">
                 <div className="contacts">
-                    <a className={"headlogo"} alt="" href="https://github.com/Abhijit004">
+                    <a aria-label="github" className={"headlogo"} alt="" href="https://github.com/Abhijit004">
                         <div className="social-icon">
                             <Github color={"var(--themecol)"} />
                         </div>
                     </a>
-                    <a className={"headlogo"} alt="" href="mailto:artistrup07@gmail.com">
+                    <a aria-label="mail" className={"headlogo"} alt="" href="mailto:artistrup07@gmail.com">
                         <div className="social-icon">
                             <Email color={"var(--themecol)"} />
                         </div>
                     </a>
-                    <a className={"headlogo"} alt="" href="https://www.linkedin.com/in/abhijit-karmakar-009ab026b/">
+                    <a aria-label="linkedin" className={"headlogo"} alt="" href="https://www.linkedin.com/in/abhijit-karmakar-009ab026b/">
                         <div className="social-icon">
                             <Linkedin color={"var(--themecol)"} />
                         </div>
                     </a>
                 </div>
-                <a href="https://drive.google.com/file/d/1tv-6SxGW0g9-rJySIlS5IUBjo7826vbs/view?usp=drive_link"><Button text={"My Resume"} /></a>
+                <a aria-label="resume" href="https://drive.google.com/file/d/1tv-6SxGW0g9-rJySIlS5IUBjo7826vbs/view?usp=drive_link"><Button text={"My Resume"} /></a>
             </div>
         </div>
     );
@@ -199,19 +199,19 @@ export function SideBar({f1, f2, f3, f4, f5}) {
             <div className="A">
                 <img src={A} alt="A" />
             </div>
-            <button onClick={f1} className="side-bar-btn">
+            <button onClick={f1} className="side-bar-btn" aria-label="about">
                 <Info cls="sidebar-icon i1" />
             </button>
-            <button onClick={f2} className="side-bar-btn">
+            <button onClick={f2} className="side-bar-btn" aria-label="projects">
                 <Projects cls="sidebar-icon i2" />
             </button>
-            <button onClick={f3} className="side-bar-btn">
+            <button onClick={f3} className="side-bar-btn" aria-label="competitive programming">
                 <CP cls="sidebar-icon i3" />
             </button>
-            <button onClick={f4} className="side-bar-btn">
+            <button onClick={f4} className="side-bar-btn" aria-label="Experience">
                 <Experience cls="sidebar-icon i4" color={"var(--themecol)"} />
             </button>
-            <button onClick={f5} className="side-bar-btn">
+            <button onClick={f5} className="side-bar-btn" aria-label="Connect">
                 <Connect cls="sidebar-icon i5" />
             </button>
         </div>

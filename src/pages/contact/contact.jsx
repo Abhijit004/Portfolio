@@ -20,7 +20,7 @@ function Contact() {
                         <Github color={"var(--themecol)"} />
                     </div>
                 </a>
-                <a href="mailto:artistrup07@gmail.com" alt="" className="tech">
+                <a href="mailto:artistrup07@gmail.com" alt="" className="tech" aria-label="email">
                     <div className="social-icon">
                         <Email color={"var(--themecol)"} />
                     </div>

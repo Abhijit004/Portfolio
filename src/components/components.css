@@ -4,7 +4,7 @@
     font-size: 1.05rem;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box !important;
 }
 
 .button {
@@ -47,9 +47,6 @@
 }
 
 /* projectCard */
-.project-card * {
-    /* position: relative; */
-}
 
 @keyframes swipe {
     0% {
@@ -183,6 +180,7 @@
         border: none;
         padding-bottom: 1rem;
         border-bottom: 1px solid #ffffff9c;
+        padding-right: 0;
     }
     .comprole {
         flex-grow: 1;
@@ -206,9 +204,7 @@
 }
 
 .dates {
-    width: max-content;
     font-weight: 400;
-    /* margin-top: 1rem; */
     padding-top: 0.5rem;
     font-size: 1rem;
 }
@@ -341,7 +337,7 @@
     display: flex;
     justify-content: space-evenly;
     gap: 1rem;
-    margin-left: 1rem;
+    margin-left: 14px;
 }
 
 .header > a {
@@ -389,6 +385,7 @@
 }
 
 .side-bar-btn {
+    border-radius: 50%;
     background-color: inherit;
     border: none;
     transition: all 0.3s ease;
@@ -399,9 +396,12 @@
 }
 
 .side-bar-btn:hover {
-    transform: translateX(5px) scale(1.05);
+    transform: translateX(5px) scale(1.2);
 }
 
+.side-bar-btn:focus {
+    transform: translateX(5px) scale(1.2);
+}
 
 
 .side-bar img {
@@ -440,11 +440,12 @@
 }
 
 .wrapper .dynamic-txts {
-    line-height: 4rem;
-    height: 4rem;
+    line-height: 1em;
+    height: 1em;
     /* background-color: var(--themecol); */
     font-size: 2.7rem;
     font-weight: 800;
+    width: 100%;
 }
 
 .dynamic-txts::after {

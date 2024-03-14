@@ -62,7 +62,7 @@ export function ProjectCard({ pic, heading, description, link, gitlink, techs })
             <a className="project-link" href={link} alt="" aria-label="project-link">
                 <div className="project-img bouncer" style={{ background: `url("assets/${pic}")` }}></div></a>
             <div className="proj-title">
-                <div className="hiderx"></div>
+                {/* <div className="hiderx"></div> */}
                 <div className="bouncer">
                     <span style={{ color: "var(--themecol)", fontSize: "1.4rem", fontWeight: "600" }}>{heading}</span>
                     <a className="a" alt="" href={`${gitlink}`}>

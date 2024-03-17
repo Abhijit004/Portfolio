@@ -87,3 +87,7 @@ p {
         width: 100%;
     }
 }
+
+.tech:hover {
+    transform: rotate(359deg);
+}

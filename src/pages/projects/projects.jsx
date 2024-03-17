@@ -21,7 +21,7 @@ function Projects() {
             <div className="project-list">
                 <ProjectCard
                     techs={["CSS", "HTML", "Javascript", "React", "ChartJS"]}
-                    pic={"proj-weather.png"}
+                    pic={"proj-weather.webp"}
                     heading={"Weather App"}
                     description={weatherapp}
                     link={"https://weather-app-abhijit004.vercel.app/"}
@@ -29,7 +29,7 @@ function Projects() {
                 />
                 <ProjectCard
                     techs={["CSS", "HTML", "Javascript", "React", "Material UI"]}
-                    pic={"proj-gcsj.png"}
+                    pic={"proj-gcsj.webp"}
                     heading={"GCSJ-IIEST"}
                     description={gcsj}
                     link={"https://gcsj-iiests.vercel.app/"}
@@ -37,7 +37,7 @@ function Projects() {
                 />
                 <ProjectCard
                     techs={["CSS", "HTML", "Javascript", "React"]}
-                    pic={"proj-tictactoe.png"}
+                    pic={"proj-tictactoe.webp"}
                     heading={"Tic Tac Toe"}
                     description={tictactoe}
                     link={"https://tic-tac-7sssu0s1f-abhijit004.vercel.app/"}
@@ -45,7 +45,7 @@ function Projects() {
                 />
                 <ProjectCard
                     techs={["CSS", "HTML", "Javascript", "React"]}
-                    pic={"proj-portfolio.jpg"}
+                    pic={"proj-portfolio.webp"}
                     heading={"Portfolio"}
                     description={portfolio}
                     link={"https://abhijit-karmakar.vercel.app/"}

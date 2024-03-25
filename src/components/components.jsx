@@ -115,7 +115,7 @@ export function ExperienceCard({ company, role, daterange, loc, desc }) {
     );
 }
 
-export function CPcard({ web, rating, contests, problems }) {
+export function CPcard({ web, rating, contests, problems, link }) {
     return (
         <div className="cp-card">
             <div className="website bouncer">
@@ -127,7 +127,7 @@ export function CPcard({ web, rating, contests, problems }) {
                 ) : (
                     <Codeforces color={"var(--themecol)"} />
                 )}
-                <span>{web}</span>
+                <span><a className = "cp-link" href={link} alt="" aria-label={web}>{web}</a></span>
             </div>
             <div className="rating">
                 <div>
@@ -223,24 +223,33 @@ const Dynamic = () => {
     const [index, setIndex] = useState(0);
     let values = ["UI/UX Designer", "Web Developer", "CP enthusiast", "Gifted Artist"];
     const [typedText, setTypedText] = useState("");
+    const [di, setDi] = useState(1);
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            if (index < values[holder].length) {
-                setTypedText((prevTypedText) => prevTypedText + values[holder][index]);
+    const interval = setInterval(() => {
+        if (index === 0 && di === -1) {
+            console.log("restart");
+            // clearInterval(interval);
+            setTypedText("");
+            setIndex(0);
+            setDi(1);
+            setHolder((holder) => (holder + 1) % values.length);
+        } else if (index < values[holder].length) {
+            setIndex(index + di);
+            setTypedText(values[holder].slice(0, index + 1));
+        } else if (index === values[holder].length) {
+            // Pause for 2 seconds
+            clearInterval(interval);
+            setTimeout(() => {
+                setIndex(index - 1);
+                setDi(-1);
+            }, 2000);
+        }
+    }, 100); // Typing speed (adjust as needed)
 
-                setIndex(index + 1);
-            } else {
-                clearInterval(interval);
-                setTimeout(() => {
-                    setTypedText("");
-                    setIndex(0);
-                    setHolder((holder) => (holder + 1) % values.length);
-                }, 2000); // Delay before starting typing the next string
-            }
-        }, 100); // Typing speed (adjust as needed)
-        return () => clearInterval(interval);
-    }, [holder, values]);
+    return () => clearInterval(interval);
+}, [holder, values, index, di]);
+
 
     return <div className="dynamic-txts">{typedText}</div>;
 };

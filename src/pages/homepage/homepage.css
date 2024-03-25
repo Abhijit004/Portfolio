@@ -3,6 +3,10 @@
     font-weight: 900;
 }
 
+a {
+    width: fit-content;
+}
+
 .home-page {
     position: relative;
     /* background-color: greenyellow; */
@@ -37,17 +41,10 @@
 @media screen and (max-width: 860px) {
     .wrapper .dynamic-txts {
         line-height: 3rem;
-        height: 6rem;
     }
 
     .dynamic-txts span {
         width: 12ch;
-    }
-
-    li {
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
     .wrapper * {

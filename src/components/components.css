@@ -245,6 +245,13 @@
     position: relative;
 }
 
+.cp-link {
+    text-decoration: none;
+    font-size: inherit;
+    font-weight: inherit;
+    cursor: pointer
+}
+
 .website svg {
     width: 2em;
     height: 2em;
@@ -446,15 +453,16 @@
     font-size: 2.7rem;
     font-weight: 800;
     width: 100%;
+    height: 1em !important;
 }
 
-.dynamic-txts::after {
+.wrapper .dynamic-txts::after {
     content: "";
     position: absolute;
     width: 2px;
     height: 50%;
     background-color: var(--themecol);
-    animation: blinking 1s steps(1) infinite;
+    /* animation: blinking 1s steps(1) infinite; */
 }
 
 @keyframes blinking {

@@ -34,13 +34,6 @@ export default function Experience() {
                     loc={"Shibpur"}
                     desc={codeiiest}
                 />
-                <ExperienceCard
-                    company={"Company"}
-                    role={"Web Developer"}
-                    daterange={"March 2023 - August 2024"}
-                    loc={"Kolkata"}
-                    desc={fiction}
-                />
             </div>
         </div>
     );

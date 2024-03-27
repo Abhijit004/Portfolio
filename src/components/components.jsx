@@ -3,18 +3,15 @@ import "./components.css";
 import A from "../assets/A.png";
 import CountUp from "react-countup";
 import {
-    Github,
-    Email,
-    Linkedin,
     Leetcode,
     Codechef,
     Codeforces,
-    Info,
-    CP,
-    Experience,
-    Projects,
-    Connect,
 } from "../assets/svgvectors";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAddressBook } from "@fortawesome/free-regular-svg-icons";
+import { faFaceSmile, faPalette, faTrophy, faUserSecret } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const NumberCountAnimation = ({ start = 0, end, duration, c }) => {
     const [isVisible, setIsVisible] = useState(false);
@@ -45,12 +42,16 @@ const NumberCountAnimation = ({ start = 0, end, duration, c }) => {
         };
     }, []);
 
-    return <div ref={countUpRef} className={c}>{isVisible && <CountUp separator="" start={start} end={end} duration={duration} />}</div>;
+    return (
+        <div ref={countUpRef} className={c}>
+            {isVisible && <CountUp separator="" start={start} end={end} duration={duration} />}
+        </div>
+    );
 };
 
 export function Button({ text }) {
     return (
-        <button className="button" >
+        <button className="button">
             <span className="text">{text}</span>
         </button>
     );
@@ -59,14 +60,15 @@ export function Button({ text }) {
 export function ProjectCard({ pic, heading, description, link, gitlink, techs }) {
     return (
         <div className="project-card">
-            <a className="project-link" href={link} alt="" aria-label="project-link">
-                <div className="project-img bouncer" style={{ background: `url("assets/${pic}")` }}></div></a>
+            <a className="project-link" href={link} alt="" aria-label="project-link" target="_blank">
+                <div className="project-img bouncer" style={{ background: `url("assets/${pic}")` }}></div>
+            </a>
             <div className="proj-title">
                 {/* <div className="hiderx"></div> */}
                 <div className="bouncer">
                     <span style={{ color: "var(--themecol)", fontSize: "1.4rem", fontWeight: "600" }}>{heading}</span>
-                    <a className="a" alt="" href={`${gitlink}`}>
-                        <Github color={"var(--themecol)"} cls={"proj-logo"} />
+                    <a className="a" alt="" href={`${gitlink}`} target="_blank">
+                        <FontAwesomeIcon className="a" icon={faGithub} size="1x" />
                     </a>
                 </div>
             </div>
@@ -127,11 +129,15 @@ export function CPcard({ web, rating, contests, problems, link }) {
                 ) : (
                     <Codeforces color={"var(--themecol)"} />
                 )}
-                <span><a className = "cp-link" href={link} alt="" aria-label={web}>{web}</a></span>
+                <span>
+                    <a className="cp-link" href={link} alt="" aria-label={web} target="_blank">
+                        {web}
+                    </a>
+                </span>
             </div>
             <div className="rating">
                 <div>
-                    <NumberCountAnimation c = {"rating-big"} start={0} end={rating} duration={1.5} />
+                    <NumberCountAnimation c={"rating-big"} start={0} end={rating} duration={1.5} />
                 </div>
                 <div className="byline">
                     <div className="hiderx"></div>
@@ -140,7 +146,7 @@ export function CPcard({ web, rating, contests, problems, link }) {
             </div>
             <div className="more-stats">
                 <div className="contests">
-                    <div>{<NumberCountAnimation c = {"rating-smol"} start={0} end={contests} duration={1.5} />}</div>
+                    <div>{<NumberCountAnimation c={"rating-smol"} start={0} end={contests} duration={1.5} />}</div>
                     <div className="byline">
                         <div className="hiderx"></div>
                         <span>Contests</span>
@@ -148,7 +154,7 @@ export function CPcard({ web, rating, contests, problems, link }) {
                 </div>
                 <div className="problems">
                     <div>
-                        <NumberCountAnimation c = {"rating-smol"} start={0} end={problems} duration={1.5} />
+                        <NumberCountAnimation c={"rating-smol"} start={0} end={problems} duration={1.5} />
                     </div>
                     <div className="byline">
                         <div className="hiderx"></div>
@@ -160,7 +166,6 @@ export function CPcard({ web, rating, contests, problems, link }) {
     );
 }
 
-
 export function Header() {
     return (
         <div className="header-wrapper">
@@ -168,52 +173,63 @@ export function Header() {
                 <div className="contacts">
                     <a aria-label="github" className={"headlogo"} alt="" href="https://github.com/Abhijit004">
                         <div className="social-icon">
-                            <Github color={"var(--themecol)"} />
+                        <FontAwesomeIcon icon={faGithub} size="2x" />
                         </div>
                     </a>
                     <a aria-label="mail" className={"headlogo"} alt="" href="mailto:artistrup07@gmail.com">
                         <div className="social-icon">
-                            <Email color={"var(--themecol)"} />
+                        <FontAwesomeIcon icon={faEnvelope} size="2x" />
                         </div>
                     </a>
-                    <a aria-label="linkedin" className={"headlogo"} alt="" href="https://www.linkedin.com/in/abhijit-karmakar-009ab026b/">
+                    <a
+                        aria-label="linkedin"
+                        className={"headlogo"}
+                        alt=""
+                        href="https://www.linkedin.com/in/abhijit-karmakar-009ab026b/"
+                    >
                         <div className="social-icon">
-                            <Linkedin color={"var(--themecol)"} />
+                        <FontAwesomeIcon icon={faLinkedin} size="2x" />
                         </div>
                     </a>
                 </div>
-                <a aria-label="resume" href="https://drive.google.com/file/d/1tv-6SxGW0g9-rJySIlS5IUBjo7826vbs/view?usp=drive_link"><Button text={"My Resume"} /></a>
+                <a
+                    aria-label="resume"
+                    target="_blank"
+                    href="https://drive.google.com/file/d/139Ydon4118Px-6s1sgNStiKGPPRr3aqW/view?usp=sharing"
+                >
+                    <Button text={"My Resume"} />
+                </a>
             </div>
         </div>
     );
 }
 
-export function SideBar({f1, f2, f3, f4, f5}) {
-    const sectionRef = useRef(null);
-
-    const scrollToSection = () => {
-        sectionRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
-    };
+export function SideBar({ f1, f2, f3, f4, f5, activate }) {
     return (
         <div className="side-bar">
             <div className="A">
                 <img src={A} alt="A" />
             </div>
-            <button onClick={f1} className="side-bar-btn" aria-label="about">
-                <Info cls="sidebar-icon i1" />
-            </button>
-            <button onClick={f2} className="side-bar-btn" aria-label="projects">
-                <Projects cls="sidebar-icon i2" />
-            </button>
-            <button onClick={f3} className="side-bar-btn" aria-label="competitive programming">
-                <CP cls="sidebar-icon i3" />
-            </button>
-            <button onClick={f4} className="side-bar-btn" aria-label="Experience">
-                <Experience cls="sidebar-icon i4" color={"var(--themecol)"} />
-            </button>
-            <button onClick={f5} className="side-bar-btn" aria-label="Connect">
-                <Connect cls="sidebar-icon i5" />
-            </button>
+            <div onClick={f1} className="side-bar-btn" aria-label="about">
+                {/* <Info cls="sidebar-icon i1" /> */}
+                <FontAwesomeIcon className={"sidebar-icon i1 " + (activate=="s1"?"activate":"") } icon={faFaceSmile} size="1x" />
+            </div>
+            <div onClick={f2} className="side-bar-btn" aria-label="projects">
+                {/* <Projects cls="sidebar-icon i2" /> */}
+                <FontAwesomeIcon className={"sidebar-icon i2 " + (activate=="s2"?"activate":"") } icon={faPalette} size="1x" />
+            </div>
+            <div onClick={f3} className="side-bar-btn" aria-label="competitive programming">
+                {/* <CP cls="sidebar-icon i3" /> */}
+                <FontAwesomeIcon className={"sidebar-icon i3 " + (activate=="s3"?"activate":"") } icon={faTrophy} size="1x" />
+            </div>
+            <div onClick={f4} className="side-bar-btn" aria-label="Experience">
+                {/* <Experience cls="sidebar-icon i4" color={"var(--themecol)"} /> */}
+                <FontAwesomeIcon className={"sidebar-icon i4 " + (activate=="s4"?"activate":"") } icon={faUserSecret} size="1x" />
+            </div>
+            <div onClick={f5} className="side-bar-btn" aria-label="Connect">
+                {/* <Connect cls="sidebar-icon i5" /> */}
+                <FontAwesomeIcon className={"sidebar-icon i5 " + (activate=="s5"?"activate":"") } icon={faAddressBook} size="1x" />
+            </div>
         </div>
     );
 }
@@ -226,30 +242,28 @@ const Dynamic = () => {
     const [di, setDi] = useState(1);
 
     useEffect(() => {
-    const interval = setInterval(() => {
-        if (index === 0 && di === -1) {
-            console.log("restart");
-            // clearInterval(interval);
-            setTypedText("");
-            setIndex(0);
-            setDi(1);
-            setHolder((holder) => (holder + 1) % values.length);
-        } else if (index < values[holder].length) {
-            setIndex(index + di);
-            setTypedText(values[holder].slice(0, index + 1));
-        } else if (index === values[holder].length) {
-            // Pause for 2 seconds
-            clearInterval(interval);
-            setTimeout(() => {
-                setIndex(index - 1);
-                setDi(-1);
-            }, 2000);
-        }
-    }, 100); // Typing speed (adjust as needed)
+        const interval = setInterval(() => {
+            if (index === 0 && di === -1) {
+                // clearInterval(interval);
+                setTypedText("");
+                setIndex(0);
+                setDi(1);
+                setHolder((holder) => (holder + 1) % values.length);
+            } else if (index < values[holder].length) {
+                setIndex(index + di);
+                setTypedText(values[holder].slice(0, index + 1));
+            } else if (index === values[holder].length) {
+                // Pause for 2 seconds
+                clearInterval(interval);
+                setTimeout(() => {
+                    setIndex(index - 1);
+                    setDi(-1);
+                }, 2000);
+            }
+        }, 100); // Typing speed (adjust as needed)
 
-    return () => clearInterval(interval);
-}, [holder, values, index, di]);
-
+        return () => clearInterval(interval);
+    }, [holder, values, index, di]);
 
     return <div className="dynamic-txts">{typedText}</div>;
 };

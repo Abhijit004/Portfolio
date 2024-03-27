@@ -1,6 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import "./aboutme.css";
 import * as SVG from "../../assets/svgvectors";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCss3Alt, faFigma, faGitAlt, faGithub, faHtml5, faJava, faJs, faNodeJs, faPython, faReact } from "@fortawesome/free-brands-svg-icons";
+import { faC } from "@fortawesome/free-solid-svg-icons";
 
 function AboutMe() {
     const observer = useRef(null);
@@ -66,21 +69,21 @@ function AboutMe() {
                             </div>
                         </div>
                         <div className="tech-list">
-                            <SVG.HTML cls = "tech" color= {"#fff"}/>
-                            <SVG.CSS cls = "tech" color= {"var(--themecol)"}/>
-                            <SVG.JS cls = "tech" color= {"#fff"}/>
-                            <SVG.Nodejs cls = "tech" color= {"var(--themecol)"}/>
-                            <SVG.React_ cls = "tech" color= {"#fff"}/>
-                            <SVG.Python cls = "tech" color= {"var(--themecol)"}/>
-                            <SVG.C cls = "tech"/>
-                            <SVG.Java cls = "tech" color= {"var(--themecol)"}/>
+                            <FontAwesomeIcon className="tech" icon={faHtml5} size="2x" />
+                            <FontAwesomeIcon className="tech" icon={faCss3Alt} size="2x" color={"var(--themecol)"}/>
+                            <FontAwesomeIcon className="tech" icon={faJs} size="2x" />
+                            <FontAwesomeIcon className="tech" icon={faNodeJs} size="2x" color={"var(--themecol)"}/>
+                            <FontAwesomeIcon className="tech" icon={faReact} size="2x" />
+                            <FontAwesomeIcon className="tech" icon={faPython} size="2x" color={"var(--themecol)"}/>
+                            <FontAwesomeIcon className="tech" icon={faC} size="2x" />
+                            <FontAwesomeIcon className="tech" icon={faJava} size="2x" color={"var(--themecol)"}/>
                             <SVG.DBMS cls = "tech" color= {"#fff"}/>
                             <SVG.SQL cls = "tech" color= {"var(--themecol)"}/>
-                            <SVG.Git cls = "tech" color= {"#fff"}/>
-                            <SVG.Github cls = "tech" color= {"var(--themecol)"}/>
+                            <FontAwesomeIcon icon={faGitAlt} className = {"tech"}size="2x" />
+                            <FontAwesomeIcon icon={faGithub} className = {"tech"}size="2x" color={"var(--themecol)"}/>
                             <SVG.MUI cls = "tech" color= {"#fff"}/>
                             <SVG.Canva cls = "tech" color= {"var(--themecol)"}/>
-                            <SVG.Figma cls = "tech" color= {"#fff"}/>
+                            <FontAwesomeIcon icon={faFigma} className = {"tech"}size="2x" />
                             <SVG.Chartjs cls = "tech" color= {"#fff"}/>
                         </div>
                     </div>

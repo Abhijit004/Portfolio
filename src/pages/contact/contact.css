@@ -35,6 +35,15 @@
     height: 3rem;
 }
 
+.social-icon {
+    color: var(--themecol);
+    transition: all 0.3s;
+}
+
+.social-icon:hover {
+    color: #fff;
+}
+
 .tech {
     display: flex;
     justify-content: center;
@@ -64,5 +73,5 @@
 }
 
 .social-icons a:hover {
-    transform: scale(1.05) translateY(-5px);
+    transform: scale(1.05) rotate(15deg);
 }

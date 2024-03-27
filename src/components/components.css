@@ -1,10 +1,13 @@
 * {
     font-family: "Poppins", sans-serif;
-    color: #fff;
     font-size: 1.05rem;
     margin: 0;
     padding: 0;
     box-sizing: border-box !important;
+}
+
+div, span, p, a {
+    color: #fff;
 }
 
 .button {
@@ -79,7 +82,8 @@
 }
 
 .a:hover{
-    transform: scale(1.05)
+    transform: scale(1.05);
+    color: var(--themecol);
 }
 
 .project-link {
@@ -363,14 +367,13 @@
     align-items: center;
     flex-direction: column;
     padding: 7px;
-    gap: 2rem;
+    gap: 3rem;
     overflow: hidden;
 }
 
 .sidebar-icon {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s ease;
+    color: var(--themecol);
+    transition: all 0.3s ease;
     transform: translateX(-40px) scale(0.5);
     animation: iconEntry 0.5s ease-out;
     animation-fill-mode: forwards;
@@ -382,16 +385,18 @@
 .i4 {animation-delay: 0.8s;}
 .i5 {animation-delay: 0.9s;}
 
+
 @keyframes iconEntry {
     50% {
         transform: translateX(5px) scale(1.3);
     }
     100% {
-        transform: translateX(0) scale(1);
+        transform: translateX(0) scale(1.8);
     }
 }
 
 .side-bar-btn {
+    color: var(--themecol);
     border-radius: 50%;
     background-color: inherit;
     border: none;
@@ -403,11 +408,11 @@
 }
 
 .side-bar-btn:hover {
-    transform: translateX(5px) scale(1.2);
+    transform: scale(1.2);
 }
 
 .side-bar-btn:focus {
-    transform: translateX(5px) scale(1.2);
+    transform: scale(1.2);
 }
 
 
@@ -503,4 +508,8 @@
 
 .cp-card, .experience, .project-card {
     box-shadow: 0 0 30px 10px hsl(0, 0%, 5%);
+}
+
+.activate {
+    color: #fff;
 }

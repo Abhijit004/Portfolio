@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Header, SideBar } from "./components/components.jsx";
 import HomePage from "./pages/homepage/homepage.jsx";
 import AboutMe from "./pages/aboutme/aboutme.jsx";
@@ -9,13 +9,15 @@ import "./index.css";
 import Contact from "./pages/contact/contact.jsx";
 
 function App() {
-    const [observer, lineController, text] = [useRef(null), useRef(null), useRef(null)];
+    const [observer, lineController, text, section] = [useRef(null), useRef(null), useRef(null), useRef(null)];
+    const [active, setActive] = useState("");
 
     useEffect(() => {
         // Initialize IntersectionObserver when the component mounts
         observer.current = new IntersectionObserver(slider, { threshold: 0.1 });
         lineController.current = new IntersectionObserver(liner, { threshold: 0.1 });
         text.current = new IntersectionObserver(texter, { threshold: 0.1 });
+        section.current = new IntersectionObserver(sectionViewManager, { threshold: 0.1 });
 
         // Fetching all boxes and setting them on observe by the observer object
         const boxes = document.querySelectorAll(".hiderx");
@@ -33,11 +35,17 @@ function App() {
             text.current.observe(box);
         });
 
+        const sections = document.querySelectorAll(".sec");
+        sections.forEach((box) => {
+            section.current.observe(box);
+        });
+
         // Cleanup function to disconnect the observer when the component unmounts
         return () => {
             observer.current.disconnect();
             lineController.current.disconnect();
             text.current.disconnect();
+            section.current.disconnect();
         };
     }, []);
     const slider = (entries) => {
@@ -51,6 +59,14 @@ function App() {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("line-render");
+            }
+        });
+    };
+
+    const sectionViewManager = (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                setActive(entry.target.classList[1]);
             }
         });
     };
@@ -88,16 +104,16 @@ function App() {
     };
     return (
         <>
-            <SideBar f1={goabout} f2={goprojects} f3={gocpstats} f4={goexp} f5={gocontact} />
+            <SideBar f1={goabout} f2={goprojects} f3={gocpstats} f4={goexp} f5={gocontact} activate = {active}/>
             <div className="root-content">
                 <Header />
                 <div className="sections">
                     <HomePage />
-                    <div style={{marginTop: "12rem", paddingTop: "100px"}} ref={about}><AboutMe  /></div>
-                    <div style={{marginTop: "12rem", paddingTop: "100px"}} ref={projects}><Projects /></div>
-                    <div style={{marginTop: "12rem", paddingTop: "100px"}} ref={cpstats}><CPStats /></div>
-                    <div style={{marginTop: "12rem", paddingTop: "100px"}} ref={exp}><Experience /></div>
-                    <div style={{marginTop: "12rem", paddingTop: "100px"}} ref={contact}><Contact /></div>
+                    <div className={"sec s1"}style={{marginTop: "12rem", paddingTop: "100px"}} ref={about}><AboutMe  /></div>
+                    <div className={"sec s2"}style={{marginTop: "12rem", paddingTop: "100px"}} ref={projects}><Projects /></div>
+                    <div className={"sec s3"}style={{marginTop: "12rem", paddingTop: "100px"}} ref={cpstats}><CPStats /></div>
+                    <div className={"sec s4"}style={{marginTop: "12rem", paddingTop: "100px"}} ref={exp}><Experience /></div>
+                    <div className={"sec s5"}style={{marginTop: "12rem", paddingTop: "100px"}} ref={contact}><Contact /></div>
                 </div>
             </div>
         </>

@@ -8,8 +8,6 @@ var gdsc =
 var codeiiest =
     "Actively woking on designing and developing the official website for CodeIIEST, which will also feature a CP ranklist as a highlight."
 
-var fiction = "As a web developer at [Company], I spearheaded front-end development projects, optimizing user experiences and implementing responsive design principles. Collaborating with cross-functional teams, I delivered innovative solutions, leveraging my expertise in HTML, CSS, JavaScript, and frameworks like React."
-
 export default function Experience() {
     return (
         <div className="experience-section">

@@ -27,7 +27,7 @@ function HomePage() {
                     <div className="hello-desc">
                         <div className="bouncer">
                             <span>
-                                Creatively striking the right balance between Web development and Competitive programming. Passionate artist and rubix cube solver
+                            Mastering both web development and competitive programming, I'm also an avid artist and Rubik's Cube enthusiast, effortlessly balancing creativity with logic.
                             </span>
                         </div>
                     </div>

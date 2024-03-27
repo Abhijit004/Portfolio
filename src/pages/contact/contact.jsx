@@ -1,6 +1,8 @@
 import React from "react";
-import { Linkedin, Github, Email } from "../../assets/svgvectors";
 import "./contact.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 function Contact() {
     return (
@@ -10,19 +12,19 @@ function Contact() {
                 <span className="bouncer">Contact</span>
             </div>
             <div className="social-icons">
-                <a href="https://www.linkedin.com/in/abhijit-karmakar-009ab026b/" alt="" className="tech">
+                <a href="https://www.linkedin.com/in/abhijit-karmakar-009ab026b/" alt="" className="tech" target="_blank">
                     <div className="social-icon">
-                        <Linkedin color={"var(--themecol)"} />
+                    <FontAwesomeIcon icon={faLinkedin} size="1x" />
                     </div>
                 </a>
-                <a href="https://github.com/Abhijit004" alt="" className="tech">
+                <a href="https://github.com/Abhijit004" alt="" className="tech" target="_blank">
                     <div className="social-icon">
-                        <Github color={"var(--themecol)"} />
+                    <FontAwesomeIcon icon={faGithub} size="1x" />
                     </div>
                 </a>
-                <a href="mailto:artistrup07@gmail.com" alt="" className="tech" aria-label="email">
+                <a href="mailto:artistrup07@gmail.com" alt="" className="tech" aria-label="email" target="_blank">
                     <div className="social-icon">
-                        <Email color={"var(--themecol)"} />
+                    <FontAwesomeIcon icon={faEnvelope} size="1x" />
                     </div>
                 </a>
             </div>
@@ -30,7 +32,7 @@ function Contact() {
                 <div className="hiderx"></div>
                 <div className="bouncer">
                     <span>
-                    Got a digital mess? Let's untangle it together! Whether you need a website to dazzle or code to wrangle, I'm your tech-savvy superhero. Drop me a line; let's make web magic happen!
+                    Feel free to reach out to me for collaborations, opportunities, or just to say hello! I'm always eager to connect and explore new ventures.
                     </span>
                 </div>
             </div>

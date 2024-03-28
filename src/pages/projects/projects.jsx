@@ -9,7 +9,7 @@ var portfolio = "An elegant, responsive portfolio inspired from TomIsLoading's d
 
 function Projects() {
     return (
-        <div className="projects">
+        <div className="projects sec s2">
             <div className="heading">
                 <div className="hiderx"></div>
                 <div className="line"></div>

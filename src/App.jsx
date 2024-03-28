@@ -66,7 +66,7 @@ function App() {
     const sectionViewManager = (entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                setActive(entry.target.classList[1]);
+                setActive(entry.target.classList[2]);
             }
         });
     };
@@ -109,11 +109,11 @@ function App() {
                 <Header />
                 <div className="sections">
                     <HomePage />
-                    <div className={"sec s1"}style={{marginTop: "12rem", paddingTop: "100px"}} ref={about}><AboutMe  /></div>
-                    <div className={"sec s2"}style={{marginTop: "12rem", paddingTop: "100px"}} ref={projects}><Projects /></div>
-                    <div className={"sec s3"}style={{marginTop: "12rem", paddingTop: "100px"}} ref={cpstats}><CPStats /></div>
-                    <div className={"sec s4"}style={{marginTop: "12rem", paddingTop: "100px"}} ref={exp}><Experience /></div>
-                    <div className={"sec s5"}style={{marginTop: "12rem", paddingTop: "100px"}} ref={contact}><Contact /></div>
+                    <div style={{marginTop: "12rem", paddingTop: "100px" }} ref={about}><AboutMe  /></div>
+                    <div style={{marginTop: "12rem", paddingTop: "100px"}} ref={projects}><Projects /></div>
+                    <div style={{marginTop: "12rem", paddingTop: "100px"}} ref={cpstats}><CPStats /></div>
+                    <div style={{marginTop: "12rem", paddingTop: "100px"}} ref={exp}><Experience /></div>
+                    <div style={{marginTop: "12rem", paddingTop: "100px"}} ref={contact}><Contact /></div>
                 </div>
             </div>
         </>

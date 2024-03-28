@@ -4,7 +4,7 @@ import "./cpstats.css";
 
 export default function CPStats() {
     return (
-        <div className="cp-stats" >
+        <div className="cp-stats sec s3" >
             <div className="heading">
                 <div className="hiderx"></div>
                 <span style={{ color: "var(--themecol)" }}>CP </span>

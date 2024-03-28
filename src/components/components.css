@@ -512,4 +512,5 @@ div, span, p, a {
 
 .activate {
     color: #fff;
+    transform: scale(2.3) !important;
 }

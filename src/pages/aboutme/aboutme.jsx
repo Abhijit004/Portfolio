@@ -31,7 +31,7 @@ function AboutMe() {
         });
     };
     return (
-        <div className="about-me">
+        <div className="about-me sec s1">
             <div>
                 <div className="heading bouncer">
                     <div className="hiderx"></div>

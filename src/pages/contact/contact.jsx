@@ -6,7 +6,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 function Contact() {
     return (
-        <div className="contact">
+        <div className="contact sec s5">
             <div className="bigheading">
                 <div className="hiderx"></div>
                 <span className="bouncer">Contact</span>

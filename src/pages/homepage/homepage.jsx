@@ -4,7 +4,7 @@ import "./homepage.css";
 
 function HomePage() {
     return (
-        <div className="home-page">
+        <div className="home-page sec s0">
             <div className="hello">
                 <span className="hi">Hi</span>
                 <span className="comma" style={{ color: "#f05353" }}>

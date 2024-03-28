@@ -10,7 +10,7 @@ var codeiiest =
 
 export default function Experience() {
     return (
-        <div className="experience-section">
+        <div className="experience-section sec s4">
             <div className="heading">
                 <div className="hiderx"></div>
                 <div className="line"></div>

@@ -115,6 +115,7 @@ function App() {
                     <div style={{marginTop: "12rem", paddingTop: "100px"}} ref={exp}><Experience /></div>
                     <div style={{marginTop: "12rem", paddingTop: "100px"}} ref={contact}><Contact /></div>
                 </div>
+                <span className="credits">Made with ❤️ By <a href="#">Abhijit Karmakar</a></span>
             </div>
         </>
     );

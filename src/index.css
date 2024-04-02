@@ -180,3 +180,17 @@ img::selection, svg::selection {
 *::-webkit-scrollbar-corner {
     display: none;
 }
+
+.credits {
+    opacity: 0.8
+}
+
+.credits a {
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.credits a:hover {
+    color: var(--themecol);
+    font-weight: 600;
+}

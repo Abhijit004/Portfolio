@@ -12,9 +12,9 @@ export default function CPStats() {
                 <div className="line-r"></div>
             </div>
             <div className="cpcard-list">
-                <CPcard web={"LeetCode"} rating={1709} contests={12} problems={394} link={"https://leetcode.com/__Abhijit__/"}/>
+                <CPcard web={"LeetCode"} rating={1709} contests={12} problems={427} link={"https://leetcode.com/__Abhijit__/"}/>
                 <CPcard web={"CodeChef"} rating={1653} contests={21} problems={198} link={"https://www.codechef.com/users/artistrup07"}/>
-                <CPcard web={"CodeForces"} rating={1349} contests={25} problems={208} link={"https://codeforces.com/profile/abhijit07cf"}/>
+                <CPcard web={"CodeForces"} rating={1402} contests={26} problems={217} link={"https://codeforces.com/profile/abhijit07cf"}/>
             </div>
         </div>
     );

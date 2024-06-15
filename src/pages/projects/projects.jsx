@@ -49,7 +49,7 @@ function Projects() {
                     heading={"Portfolio"}
                     description={portfolio}
                     link={"https://abhijit-karmakar.vercel.app/"}
-                    gitlink={"https://github.com/Abhijit004/Weather-App"}
+                    gitlink={"https://github.com/Abhijit004/Portfolio"}
                 />
             </div>
         </div>

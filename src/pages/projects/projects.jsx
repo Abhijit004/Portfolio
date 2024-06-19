@@ -2,11 +2,16 @@ import React from "react";
 import { ProjectCard } from "../../components/components";
 import "./projects.css";
 
-var weatherapp = "A responsive Weather App made using Weathermap API, which can provide realtime weather information and prediction of next 5 days."
-var gcsj = "Teamed up with my brother and fellow batchmate Soumyajit Karmakar to build a website for Google Cloud Study Jams, IIEST Shibpur."
-var tictactoe = `A simple tic-tac-toe game made using React. My first react project, thanks to a great "Learning By doing" tic-tac-toe project from React's official website.`
-var portfolio = "An elegant, responsive portfolio inspired from TomIsLoading's design. Carefully chosen theme colors and crafted scroll animations makes it complete."
-
+var weatherapp =
+    "A responsive Weather App made using Weathermap API, which can provide realtime weather information and prediction of next 5 days.";
+var gcsj =
+    "Teamed up with my brother and fellow batchmate Soumyajit Karmakar to build a website for Google Cloud Study Jams, IIEST Shibpur.";
+var tictactoe = `A simple tic-tac-toe game made using React. My first react project, thanks to a great "Learning By doing" tic-tac-toe project from React's official website.`;
+var portfolio =
+    "An elegant, responsive portfolio inspired from TomIsLoading's design. Carefully chosen theme colors and crafted scroll animations makes it complete.";
+var cpdsa =
+    "Designed and co-developed a website that attracted over 650 unique IP addresses and over 2,000 page visits within seven days of its launch (as per Vercel analytics).";
+var calculator = "A basic calculator with glassmorphism UI, using only plain HTML, CSS and Vanilla Javascript. Provided light and dark mode features to enhance user experience."
 function Projects() {
     return (
         <div className="projects sec s2">
@@ -20,7 +25,23 @@ function Projects() {
             </div>
             <div className="project-list">
                 <ProjectCard
-                    techs={["CSS", "HTML", "Javascript", "React", "ChartJS"]}
+                    techs={["CSS", "HTML", "Javascript", "React", "Material UI", "API"]}
+                    pic={"cpdsa.webp"}
+                    heading={"CP DSA Bootcamp"}
+                    description={cpdsa}
+                    link={"https://cp-dsa-bootcamp.vercel.app/"}
+                    gitlink={"https://github.com/Soumyajit0803/cp-dsa-bootcamp"}
+                />
+                <ProjectCard
+                    techs={["CSS", "HTML", "Javascript", "React"]}
+                    pic={"proj-portfolio.webp"}
+                    heading={"Portfolio"}
+                    description={portfolio}
+                    link={"https://abhijit-karmakar.vercel.app/"}
+                    gitlink={"https://github.com/Abhijit004/Portfolio"}
+                />
+                <ProjectCard
+                    techs={["CSS", "HTML", "Javascript", "React", "ChartJS", "API"]}
                     pic={"proj-weather.webp"}
                     heading={"Weather App"}
                     description={weatherapp}
@@ -44,12 +65,12 @@ function Projects() {
                     gitlink={"https://github.com/Abhijit004/tic-tac-toe"}
                 />
                 <ProjectCard
-                    techs={["CSS", "HTML", "Javascript", "React"]}
-                    pic={"proj-portfolio.webp"}
-                    heading={"Portfolio"}
-                    description={portfolio}
-                    link={"https://abhijit-karmakar.vercel.app/"}
-                    gitlink={"https://github.com/Abhijit004/Portfolio"}
+                    techs={["CSS", "HTML", "Vanilla Javascript"]}
+                    pic={"calculator.webp"}
+                    heading={"Basic Calculator"}
+                    description={calculator}
+                    link={"https://abhijit004.github.io/Basic-Calculator/"}
+                    gitlink={"https://github.com/Abhijit004/tic-tac-toe"}
                 />
             </div>
         </div>

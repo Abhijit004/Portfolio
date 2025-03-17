@@ -36,7 +36,7 @@ function HomePage() {
                         <Button text={"Contact Me"} />
                     </a>
                 </div>
-                <img src={"assets/me6.png"} className="me bouncer" alt="me" />
+                <img src={"assets/horse.png"} className="me bouncer" alt="me" />
             </div>
         </div>
     );

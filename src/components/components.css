@@ -452,11 +452,11 @@ div, span, p, a {
 }
 
 .wrapper .dynamic-txts {
-    line-height: 1em;
-    height: 1em;
+    line-height: 1.2em;
+    height: 1.2em;
     /* background-color: var(--themecol); */
     font-size: 2.7rem;
-    font-weight: 800;
+    font-weight: 500;
     width: 100%;
     height: 1em !important;
 }

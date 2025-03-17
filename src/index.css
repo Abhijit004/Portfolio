@@ -53,6 +53,7 @@ img::selection, svg::selection {
 #root {
     display: grid;
     grid-template-columns: 60px 1fr;
+    overflow-x: hidden;
 }
 
 .line,

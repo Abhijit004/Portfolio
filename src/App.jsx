@@ -109,11 +109,11 @@ function App() {
                 <Header />
                 <div className="sections">
                     <HomePage />
-                    <div style={{marginTop: "12rem", paddingTop: "100px" }} ref={about}><AboutMe  /></div>
-                    <div style={{marginTop: "12rem", paddingTop: "100px"}} ref={projects}><Projects /></div>
-                    <div style={{marginTop: "12rem", paddingTop: "100px"}} ref={cpstats}><CPStats /></div>
-                    <div style={{marginTop: "12rem", paddingTop: "100px"}} ref={exp}><Experience /></div>
-                    <div style={{marginTop: "12rem", paddingTop: "100px"}} ref={contact}><Contact /></div>
+                    <div style={{marginTop: "5rem", paddingTop: "100px" }} ref={about}><AboutMe  /></div>
+                    <div style={{marginTop: "5rem", paddingTop: "100px"}} ref={projects}><Projects /></div>
+                    <div style={{marginTop: "5rem", paddingTop: "100px"}} ref={cpstats}><CPStats /></div>
+                    <div style={{marginTop: "5rem", paddingTop: "100px"}} ref={exp}><Experience /></div>
+                    <div style={{marginTop: "5rem", paddingTop: "100px"}} ref={contact}><Contact /></div>
                 </div>
                 <span className="credits">Made with ❤️ By <a href="#">Abhijit Karmakar</a></span>
             </div>

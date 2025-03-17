@@ -38,20 +38,6 @@ a {
     font-weight: 300;
 }
 
-@media screen and (max-width: 860px) {
-    .wrapper .dynamic-txts {
-        line-height: 3rem;
-    }
-
-    .dynamic-txts span {
-        width: 12ch;
-    }
-
-    .wrapper * {
-        font-size: 10rem;
-    }
-}
-
 .hello,
 .hello-about,
 .hello-desc {
@@ -135,12 +121,29 @@ a {
 .me-content {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    position: relative;
+
 }
 
 .hello-desc .shower,
 .hello-desc .bouncer,
 .static-text .bouncer {
     animation-delay: 0.4s !important;
+}
+
+@media screen and (max-width: 860px) {
+    .wrapper .dynamic-txts {
+        line-height: 3rem;
+    }
+
+    .dynamic-txts span {
+        width: 12ch;
+    }
+
+    .wrapper * {
+        font-size: 10rem;
+    }
 }
 
 @media screen and (max-width: 570px) {
@@ -155,10 +158,13 @@ a {
 }
 
 .me {
-    width: min(100%, 300px);
+    position: absolute;
+    right: 0;
+    width: min(100%, 200px);
     padding: 0;
     margin: 0;
     z-index: -100;
+    transform: scale(3) !important;
 }
 
 @media screen and (max-width: 884px) {
@@ -167,7 +173,7 @@ a {
     }
 
     .me {
-        display: none;
+        opacity: 0.3 !important;
     }
     
 }

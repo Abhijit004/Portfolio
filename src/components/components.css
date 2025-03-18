@@ -197,13 +197,13 @@ div, span, p, a {
     }
 }
 .company {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 1.5rem;
 }
 
 .role {
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 400;
     color: var(--themecol);
 }
 
@@ -216,7 +216,7 @@ div, span, p, a {
 .location {
     font-size: 1.2rem;
     color: #fff;
-    font-weight: 500;
+    font-weight: 300;
 }
 
 .desc {

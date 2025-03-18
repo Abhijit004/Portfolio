@@ -4,6 +4,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: #252525;
+    box-shadow: 0 0 30px 10px hsl(0, 0%, 5%);
+    padding: 3rem 0;
+    border-radius: 10px;
 }
 
 .bigheading {

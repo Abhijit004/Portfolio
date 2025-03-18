@@ -2,7 +2,18 @@ import React, { useEffect, useRef } from "react";
 import "./aboutme.css";
 import * as SVG from "../../assets/svgvectors";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCss3Alt, faFigma, faGitAlt, faGithub, faHtml5, faJava, faJs, faNodeJs, faPython, faReact } from "@fortawesome/free-brands-svg-icons";
+import {
+    faCss3Alt,
+    faFigma,
+    faGitAlt,
+    faGithub,
+    faHtml5,
+    faJava,
+    faJs,
+    faNodeJs,
+    faPython,
+    faReact,
+} from "@fortawesome/free-brands-svg-icons";
 import { faC } from "@fortawesome/free-solid-svg-icons";
 
 function AboutMe() {
@@ -21,7 +32,7 @@ function AboutMe() {
         return () => {
             observer.current.disconnect();
         };
-    }, []); 
+    }, []);
 
     const slider = (entries) => {
         entries.forEach((entry) => {
@@ -44,19 +55,30 @@ function AboutMe() {
                         <div className="para">
                             <div className="hiderx"></div>
                             <p className="bouncer">
-                                I am currently pursuing a B.Tech(UG) course in Information Technology from IIEST, Shibpur. Currently I am in my 2nd year, looking for oppurtunities to enhance my skills and learn new technologies
+                                I am currently pursuing a B.Tech in Information Technology from IIEST, Shibpur, and I am
+                                in my third year. My journey in development started with self-learning, and over time, I
+                                have led multiple projects that have strengthened my problem-solving and technical
+                                expertise.
                             </p>
                         </div>
                         <div className="para">
                             <div className="hiderx"></div>
                             <p className="bouncer">
-                                I am a passionate, self taught web developer with a good UI/UX designing skills. I primarily use figma for all kinds of brainstorming. Currently, I use React as the Javascript Framework for my projects, however aiming to add more in my armour.
+                                As a passionate web developer, I specialize in building intuitive and user-friendly
+                                interfaces. I primarily use Figma for UI/UX brainstorming and design. I work extensively
+                                with React, along with Material UI and Ant Design. I have led the design and development
+                                of websites for college fests like Instruo and Rebeca, integrating advanced frontend
+                                techniques.
                             </p>
                         </div>
                         <div className="para">
                             <div className="hiderx"></div>
                             <p className="bouncer">
-                            Apart from web development, I am also passionate about competitive programming. Till now, I have given many contests across popular platforms. I primarily use Python for its super easy syntax.
+                                Beyond web development, I have a strong passion for competitive programming and
+                                problem-solving (Recently competed in the ICPC Amritapuri Regionals!). Python is my
+                                go-to language for its simplicity. Additionally, I mentor
+                                aspiring developers and have conducted sessions on Git, GitHub, and frontend
+                                development.
                             </p>
                         </div>
                     </div>
@@ -70,21 +92,21 @@ function AboutMe() {
                         </div>
                         <div className="tech-list">
                             <FontAwesomeIcon className="tech" icon={faHtml5} size="2x" />
-                            <FontAwesomeIcon className="tech" icon={faCss3Alt} size="2x" color={"var(--themecol)"}/>
+                            <FontAwesomeIcon className="tech" icon={faCss3Alt} size="2x" color={"var(--themecol)"} />
                             <FontAwesomeIcon className="tech" icon={faJs} size="2x" />
-                            <FontAwesomeIcon className="tech" icon={faNodeJs} size="2x" color={"var(--themecol)"}/>
+                            <FontAwesomeIcon className="tech" icon={faNodeJs} size="2x" color={"var(--themecol)"} />
                             <FontAwesomeIcon className="tech" icon={faReact} size="2x" />
-                            <FontAwesomeIcon className="tech" icon={faPython} size="2x" color={"var(--themecol)"}/>
+                            <FontAwesomeIcon className="tech" icon={faPython} size="2x" color={"var(--themecol)"} />
                             <FontAwesomeIcon className="tech" icon={faC} size="2x" />
-                            <FontAwesomeIcon className="tech" icon={faJava} size="2x" color={"var(--themecol)"}/>
-                            <SVG.DBMS cls = "tech" color= {"#fff"}/>
-                            <SVG.SQL cls = "tech" color= {"var(--themecol)"}/>
-                            <FontAwesomeIcon icon={faGitAlt} className = {"tech"}size="2x" />
-                            <FontAwesomeIcon icon={faGithub} className = {"tech"}size="2x" color={"var(--themecol)"}/>
-                            <SVG.MUI cls = "tech" color= {"#fff"}/>
-                            <SVG.Canva cls = "tech" color= {"var(--themecol)"}/>
-                            <FontAwesomeIcon icon={faFigma} className = {"tech"}size="2x" />
-                            <SVG.Chartjs cls = "tech" color= {"#fff"}/>
+                            <FontAwesomeIcon className="tech" icon={faJava} size="2x" color={"var(--themecol)"} />
+                            <SVG.DBMS cls="tech" color={"#fff"} />
+                            <SVG.SQL cls="tech" color={"var(--themecol)"} />
+                            <FontAwesomeIcon icon={faGitAlt} className={"tech"} size="2x" />
+                            <FontAwesomeIcon icon={faGithub} className={"tech"} size="2x" color={"var(--themecol)"} />
+                            <SVG.MUI cls="tech" color={"#fff"} />
+                            <SVG.Canva cls="tech" color={"var(--themecol)"} />
+                            <FontAwesomeIcon icon={faFigma} className={"tech"} size="2x" />
+                            <SVG.Chartjs cls="tech" color={"#fff"} />
                         </div>
                     </div>
                 </div>

@@ -11,7 +11,11 @@ var portfolio =
     "An elegant, responsive portfolio inspired from TomIsLoading's design. Carefully chosen theme colors and crafted scroll animations makes it complete.";
 var cpdsa =
     "Designed and co-developed a website that attracted over 650 unique IP addresses and over 2,000 page visits within seven days of its launch (as per Vercel analytics).";
-var calculator = "A basic calculator with glassmorphism UI, using only plain HTML, CSS and Vanilla Javascript. Provided light and dark mode features to enhance user experience."
+var calculator =
+    "A basic calculator with glassmorphism UI, using only plain HTML, CSS and Vanilla Javascript. Provided light and dark mode features to enhance user experience.";
+var rebeca = "Developed authentication for Rebeca fest website, implementing Google login for IIESTians and a passkey-based access system. Managed client, server, and admin modules for user registration and event management."
+
+var instruo = "Led the complete design and development of the Instruo website, focusing on an intuitive UI/UX and seamless event interactions to enhance the fest experience, which featured 20+ events and 100+ participations accross all events."
 function Projects() {
     return (
         <div className="projects sec s2">
@@ -24,6 +28,22 @@ function Projects() {
                 </div>
             </div>
             <div className="project-list">
+                <ProjectCard
+                    techs={["CSS", "HTML", "JavaScript", "React", "MongoDB", "Mongoose", "Express", "MUI", "Ant Design", "API", "Figma"]}
+                    pic={"proj-rebeca.png"}
+                    heading={"Rebeca"}
+                    description={rebeca}
+                    link={"https://rebeca.in"}
+                    gitlink={"https://github.com/Soumyajit0803/rebeca-v2"}
+                />
+                <ProjectCard
+                    techs={["CSS", "HTML", "JavaScript", "React", "Ant Design", "API", "Figma"]}
+                    pic={"proj-instruo.png"}
+                    heading={"Instruo"}
+                    description={instruo}
+                    link={"https://instruo.tech"}
+                    gitlink={"https://github.com/Abhijit004/InstruoMain2k24"}
+                />
                 <ProjectCard
                     techs={["CSS", "HTML", "Javascript", "React", "Material UI", "API"]}
                     pic={"cpdsa.webp"}

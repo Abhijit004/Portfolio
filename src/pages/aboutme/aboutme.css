@@ -44,11 +44,22 @@
 }
 
 .tech {
-    width: 4rem;
-    height: 4rem;
+    width: 3.5rem;
+    height: 3.5rem;
     color: var(secondary);
     fill: var(--primary);
     padding: 0.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.2s ease-in;
+}
+
+.tech span {
+    font-size: 0.8rem;
+    color: #ffffff00;
+    font-family: "Fira Code", monospace;
 }
 
 .tech img {
@@ -101,6 +112,10 @@ p {
 .tech:hover {
     animation: techIcon 2s ease 0s 1 normal forwards;
     cursor: pointer;
+}
+
+.tech:hover span {
+    color: rgba(199, 199, 199, 0.411);
 }
 
 @keyframes techIcon {

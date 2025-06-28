@@ -19,10 +19,7 @@ import "./aboutme.css";
 
 function AboutMe() {
     const observer = useRef(null);
-    const icons = [];
-    for (let i = 1; i <= 18; i++) {
-        icons.push(i);
-    }
+    const icons = ['angular', 'antd', 'canva', 'colab', 'css3', 'express', 'figma', 'git', 'github', 'html', 'java', 'javascript', 'mongodb', 'mui', 'mysql', 'nextjs', 'nodejs', 'notion', 'oracle', 'photoshop', 'python', 'react', 'render', 'sublime', 'typescript', 'vercel', 'vitejs', 'vscode'];
 
     useEffect(() => {
         // Initialize IntersectionObserver when the component mounts
@@ -94,10 +91,11 @@ function AboutMe() {
                             </div>
                         </div>
                         <div className="tech-list">
-                            {icons.map((i) => {
+                            {icons.map((icon, i) => {
                                 return (
-                                    <div className="tech">
-                                        <img src={`/assets/MyStack/icon${i}.svg`} />
+                                    <div className="tech" key = {i}>
+                                        <img src={`/assets/MyStack/${icon}.svg`} alt={icon}/>
+                                        <span>{icon}</span>
                                     </div>
                                 );
                             })}

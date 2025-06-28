@@ -16,7 +16,7 @@ export default function Experience() {
             <div className="heading">
                 <div className="hiderx"></div>
                 <div className="line"></div>
-                <span>Experience</span>
+                <span classname='theme-grad'>Experience</span>
                 <div className="line-r"></div>
             </div>
             <div className="exp-list">

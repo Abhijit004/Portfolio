@@ -9,7 +9,7 @@ function Contact() {
         <div className="contact sec s5">
             <div className="bigheading">
                 <div className="hiderx"></div>
-                <span className="bouncer">Contact</span>
+                <span className="bouncer theme-grad">Contact</span>
             </div>
             <div className="social-icons">
                 <a href="https://www.linkedin.com/in/abhijit-karmakar-009ab026b/" alt="" className="tech" target="_blank">

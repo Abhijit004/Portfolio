@@ -6,7 +6,10 @@ import Projects from "./pages/projects/projects.jsx";
 import CPStats from "./pages/cpstats/cpstats.jsx";
 import Experience from "./pages/experience/experience.jsx";
 import "./index.css";
+import "./App.css";
 import Contact from "./pages/contact/contact.jsx";
+import Hero from "./pages/Hero/Hero.jsx";
+import star from "/assets/star.svg";
 
 function App() {
     const [observer, lineController, text, section] = [useRef(null), useRef(null), useRef(null), useRef(null)];
@@ -104,18 +107,37 @@ function App() {
     };
     return (
         <>
-            <SideBar f1={goabout} f2={goprojects} f3={gocpstats} f4={goexp} f5={gocontact} activate = {active}/>
+            <SideBar f1={goabout} f2={goprojects} f3={gocpstats} f4={goexp} f5={gocontact} activate={active} />
             <div className="root-content">
                 <Header />
-                <div className="sections">
-                    <HomePage />
-                    <div style={{marginTop: "5rem", paddingTop: "100px" }} ref={about}><AboutMe  /></div>
-                    <div style={{marginTop: "5rem", paddingTop: "100px"}} ref={projects}><Projects /></div>
-                    <div style={{marginTop: "5rem", paddingTop: "100px"}} ref={cpstats}><CPStats /></div>
-                    <div style={{marginTop: "5rem", paddingTop: "100px"}} ref={exp}><Experience /></div>
-                    <div style={{marginTop: "5rem", paddingTop: "100px"}} ref={contact}><Contact /></div>
+                <div className="star">
+                    <img src={star} />
                 </div>
-                <span className="credits">Made with ❤️ By <a href="#">Abhijit Karmakar</a></span>
+                <div className="sections">
+                    {/* <HomePage /> */}
+                    <Hero />
+                    <div ref={about}>
+                        <AboutMe />
+                    </div>
+                    <div style={{ marginTop: "5rem", paddingTop: "100px" }} ref={projects}>
+                        <Projects />
+                    </div>
+                    <div style={{ marginTop: "5rem", paddingTop: "100px" }} ref={cpstats}>
+                        <CPStats />
+                    </div>
+                    <div style={{ marginTop: "5rem", paddingTop: "100px" }} ref={exp}>
+                        <Experience />
+                    </div>
+                    <div style={{ marginTop: "5rem", paddingTop: "100px" }} ref={contact}>
+                        <Contact />
+                    </div>
+                    <span className="credits">
+                        Made with ❤️ By{" "}
+                        <a href="#" className="theme-grad">
+                            Abhijit Karmakar
+                        </a>
+                    </span>
+                </div>
             </div>
         </>
     );

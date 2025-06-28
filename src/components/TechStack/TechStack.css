@@ -1,0 +1,7 @@
+.techstack-container {
+    position: relative;
+}
+.techstack-container .techstack {
+    width: 100%;
+    height: 100%;
+}

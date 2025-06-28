@@ -24,13 +24,13 @@ export function DBMS({ cls: _, color: $ }) {
                 <defs id="defs9728"></defs>{" "}
                 <sodipodi:namedview
                     id="namedview9726"
-                    pagecolor="#ffffff"
+                    pagecolor={$}
                     bordercolor="#666666"
                     borderopacity="1.0"
                     inkscape:showpageshadow="2"
                     inkscape:pageopacity="0.0"
                     inkscape:pagecheckerboard="0"
-                    inkscape:deskcolor="#d1d1d1"
+                    inkscape:deskcolor={$}
                     showgrid="true"
                     inkscape:zoom="0.42059316"
                     inkscape:cx="148.59966"
@@ -73,8 +73,8 @@ export function DBMS({ cls: _, color: $ }) {
                 <path
                     id="path3428"
                     style={{
-                        color: "#fff",
-                        fill: "#fff",
+                        color: {$},
+                        fill: {$},
                         strokeLinejoin: "round",
                         InkscapeStroke: "none",
                         paintOrder: "stroke fill markers",
@@ -92,7 +92,7 @@ export function SQL({ cls: _, color: $ }) {
             fill={$}
             viewBox="-1.68 -1.68 27.36 27.36"
             xmlns="http://www.w3.org/2000/svg"
-            stroke="#000000"
+            stroke={$}
             strokeWidth="0.384"
         >
             <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
@@ -110,7 +110,7 @@ export function MUI({ cls: _, color: $ }) {
     return (
         <svg
             className={_}
-            fill="#ffffff"
+            fill={$}
             width="800px"
             height="800px"
             viewBox="0 0 24 24"
@@ -184,14 +184,14 @@ export function Chartjs({ cls: _, color: $ }) {
     return (
         <svg className={_} version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px"
 	y="0px" width="1900px" height="1900px" viewBox="12 12 170 170" enableBackground="new 10 10 300 300" xmlSpace="preserve">
-	<path fill="rgba(240,83,83,0.607)" d="M161.271,96.556c-22.368,0.439-17.709,14.599-33.473,18.18c-16.014,3.638-18.542-39.111-34.552-39.111
+	<path fill="hsla(253, 84%, 63%, 0.607)" d="M161.271,96.556c-22.368,0.439-17.709,14.599-33.473,18.18c-16.014,3.638-18.542-39.111-34.552-39.111
 	c-16.012,0-19.559,41.526-39.608,70.034l-0.572,0.807l42.985,24.813l65.22-37.651V96.556z" />
-	<path fill="rgba(240,83,83,0.413)" d="M161.271,95.267c-7.488-9.61-12.567-20.658-23.494-20.658c-19.337,0-14.249,31.545-35.62,31.545
+	<path fill="hsla(253, 84%, 63%, 0.413)" d="M161.271,95.267c-7.488-9.61-12.567-20.658-23.494-20.658c-19.337,0-14.249,31.545-35.62,31.545
 	c-21.373,0-23.62-33.931-47.832-2.035c-7.715,10.163-13.925,21.495-18.803,32.218l60.529,34.943l65.22-37.651V95.267z" />
-	<path opacity="0.8" fill="rgba(240,83,83,0.612)" d="M30.829,108.334c7.338-20.321,10.505-36.779,24.514-36.779
+	<path opacity="0.8" fill="hsla(253, 84%, 63%, 0.612)" d="M30.829,108.334c7.338-20.321,10.505-36.779,24.514-36.779
 	c21.371,0,26.458,60.039,44.779,53.931c18.318-6.105,16.282-38.669,44.779-38.669c5.424,0,10.962,3.323,16.371,8.698v38.113
 	l-65.22,37.651l-65.222-37.651V108.334z" />
-	<path fill="#f05353" d="M96,176l-69.292-39.999V56L96,16l69.292,40v80L96,176z M34.849,131.301L96,166.602l61.151-35.301V60.7
+	<path fill="hsl(253, 84%, 63%)" d="M96,176l-69.292-39.999V56L96,16l69.292,40v80L96,176z M34.849,131.301L96,166.602l61.151-35.301V60.7
 	L96,25.399L34.849,60.7V131.301z" />
 </svg>
     )

@@ -23,7 +23,7 @@ function Projects() {
                 <div className="hiderx"></div>
                 <div className="line"></div>
                 <div className="bouncer">
-                    <span style={{ color: "var(--themecol)", paddingRight: "5px" }}>My</span>
+                    <span className="theme-grad">My</span>
                     <span>Projects</span>
                 </div>
             </div>

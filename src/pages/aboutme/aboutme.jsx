@@ -15,9 +15,14 @@ import {
     faReact,
 } from "@fortawesome/free-brands-svg-icons";
 import { faC } from "@fortawesome/free-solid-svg-icons";
+import TechStack from "../../components/TechStack/TechStack";
 
 function AboutMe() {
     const observer = useRef(null);
+    const icons = [];
+    for (let i = 1; i <= 18; i++) {
+        icons.push(i);
+    }
 
     useEffect(() => {
         // Initialize IntersectionObserver when the component mounts
@@ -47,7 +52,7 @@ function AboutMe() {
                 <div className="heading bouncer">
                     <div className="hiderx"></div>
                     <span>About</span>
-                    <span style={{ color: "var(--themecol)" }}> Me</span>
+                    <span className="theme-grad"> Me</span>
                     <div className="line-r"></div>
                 </div>
                 <div className="about-content">
@@ -76,9 +81,8 @@ function AboutMe() {
                             <p className="bouncer">
                                 Beyond web development, I have a strong passion for competitive programming and
                                 problem-solving (Recently competed in the ICPC Amritapuri Regionals!). Python is my
-                                go-to language for its simplicity. Additionally, I mentor
-                                aspiring developers and have conducted sessions on Git, GitHub, and frontend
-                                development.
+                                go-to language for its simplicity. Additionally, I mentor aspiring developers and have
+                                conducted sessions on Git, GitHub, and frontend development.
                             </p>
                         </div>
                     </div>
@@ -87,30 +91,22 @@ function AboutMe() {
                             <div className="hiderx"></div>
                             <div className="bouncer">
                                 <span>What I</span>
-                                <span style={{ color: "var(--themecol)" }}> Love</span>
+                                <span className="theme-grad"> Love</span>
                             </div>
                         </div>
                         <div className="tech-list">
-                            <FontAwesomeIcon className="tech" icon={faHtml5} size="2x" />
-                            <FontAwesomeIcon className="tech" icon={faCss3Alt} size="2x" color={"var(--themecol)"} />
-                            <FontAwesomeIcon className="tech" icon={faJs} size="2x" />
-                            <FontAwesomeIcon className="tech" icon={faNodeJs} size="2x" color={"var(--themecol)"} />
-                            <FontAwesomeIcon className="tech" icon={faReact} size="2x" />
-                            <FontAwesomeIcon className="tech" icon={faPython} size="2x" color={"var(--themecol)"} />
-                            <FontAwesomeIcon className="tech" icon={faC} size="2x" />
-                            <FontAwesomeIcon className="tech" icon={faJava} size="2x" color={"var(--themecol)"} />
-                            <SVG.DBMS cls="tech" color={"#fff"} />
-                            <SVG.SQL cls="tech" color={"var(--themecol)"} />
-                            <FontAwesomeIcon icon={faGitAlt} className={"tech"} size="2x" />
-                            <FontAwesomeIcon icon={faGithub} className={"tech"} size="2x" color={"var(--themecol)"} />
-                            <SVG.MUI cls="tech" color={"#fff"} />
-                            <SVG.Canva cls="tech" color={"var(--themecol)"} />
-                            <FontAwesomeIcon icon={faFigma} className={"tech"} size="2x" />
-                            <SVG.Chartjs cls="tech" color={"#fff"} />
+                            {icons.map((i) => {
+                                return (
+                                    <div className="tech">
+                                        <img src={`/assets/MyStack/icon${i}.svg`} />
+                                    </div>
+                                );
+                            })}
                         </div>
                     </div>
                 </div>
             </div>
+            {/* <TechStack /> */}
         </div>
     );
 }

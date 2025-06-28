@@ -9,12 +9,12 @@ function HomePage() {
                 <div className="me-content">
                     <div className="hello">
                         <span className="hi">Hi</span>
-                        <span className="comma" style={{ color: "#f05353" }}>
+                        <span className="comma" style={{ color: "var(--secondary)" }}>
                             ,
                         </span>
                         <span> </span>
                         <span className="I">I</span>
-                        <span className="qmark" style={{ color: "#f05353" }}>
+                        <span className="qmark" style={{ color: "var(--secondary)" }}>
                             '
                         </span>
                         <span className="m">m</span>

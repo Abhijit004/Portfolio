@@ -1,0 +1,129 @@
+.codercard2 * {
+    /* outline: 1px solid lime; */
+    z-index: 100;
+}
+
+.codercard2 {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #1b1a1a;
+    border-radius: 10px;
+    position: relative;
+    width: min(16rem, 100%);
+    position: relative;
+    flex-grow: 1;
+    z-index: 1;
+    transition: ease 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+    /* margin: 3rem; */
+}
+
+.codercard2.leetcode {
+    border: 2px solid #ffd15c45;
+}
+.codercard2.codechef {
+    border: 2px solid #f0535345;
+}
+.codercard2.codeforces {
+    border: 2px solid #2196f345;
+}
+
+.codercard2 .platform {
+    height: 6rem;
+}
+
+.codercard2 .platform img {
+    height: 100%;
+}
+.codercard2 .backdrop {
+    width: 21rem;
+    position: absolute;
+    top: -5.5rem;
+    z-index: 0;
+    opacity: 0.8;
+}
+
+.codercard2 .backdrop img {
+    width: 100%;
+}
+
+.codercard2 .rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.codercard2 .rating span {
+    font-size: 1rem;
+    font-weight: 300;
+    color: hsla(0, 0%, 100%, 59%);
+    line-height: 1.2em;
+}
+
+.codercard2 .rating .num span {
+    font-size: 4rem;
+    font-weight: 600;
+    color: inherit;
+}
+
+.codercard2 .stats {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 16rem;
+}
+
+.codercard2 .stats .stat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.codercard2 .stats .stat span {
+    line-height: 1.2em;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 300;
+    color: hsla(0, 0%, 100%, 59%);
+}
+
+.codercard2 .stats .stat .num span {
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.2em;
+    color: inherit;
+}
+
+.codercard2:hover {
+    transform: scale(1.05);
+}
+
+.codercard2 .handle {
+    color: #fff;
+    font-family: "Fira Code", monospace;
+    outline: none;
+    text-decoration: none;
+    position: relative;
+}
+
+.codercard2 .handle:before {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -2px;
+    transition: all 0.1s ease-in;
+}
+
+.codercard2 .handle:hover:before {
+    width: 100%;
+}

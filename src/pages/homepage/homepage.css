@@ -1,6 +1,6 @@
 .hello span {
-    font-size: 4.5rem;
-    font-weight: 900;
+    font-size: 5rem;
+    font-weight: 600;
 }
 
 a {
@@ -14,6 +14,7 @@ a {
     justify-content: start;
     /* align-items: center; */
     flex-direction: column;
+    color: #fff
 }
 
 .hello span,
@@ -39,7 +40,6 @@ a {
 }
 
 .hello,
-.hello-about,
 .hello-desc {
     height: 0% !important;
     position: relative;
@@ -96,6 +96,9 @@ a {
 .abhijit {
     transform: translateY(10rem);
     animation-delay: 0.2s !important;
+    background-image: linear-gradient(90deg, #9C2CFC, #ff2d7e);
+    background-clip: text;
+    color: transparent
 }
 
 @keyframes place {
@@ -123,7 +126,6 @@ a {
     flex-direction: column;
     overflow: hidden;
     position: relative;
-
 }
 
 .hello-desc .shower,
@@ -175,9 +177,12 @@ a {
     .me {
         opacity: 0.3 !important;
     }
-    
 }
 
 .button {
     width: max-content;
+}
+
+.hello-desc span {
+    color: #c7c7c7;
 }

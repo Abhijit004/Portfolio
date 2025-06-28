@@ -6,10 +6,6 @@
     box-sizing: border-box !important;
 }
 
-div, span, p, a {
-    color: #fff;
-}
-
 .button {
     position: relative;
     border: 2px solid var(--themecol);
@@ -19,7 +15,6 @@ div, span, p, a {
     background-color: #ffffff00;
     cursor: pointer;
     transition: all 0.2s linear;
-    border-radius: 10px;
 }
 .text {
     color: inherit;
@@ -42,7 +37,6 @@ div, span, p, a {
     transform-origin: left;
     transition: width 0.2s ease-out;
     z-index: -1;
-    border-radius: 8px;
 }
 
 .button:hover::before {
@@ -67,7 +61,7 @@ div, span, p, a {
     align-items: center;
     flex-direction: column;
     position: relative;
-    border-radius: 10px; 
+    border-radius: 10px;
     width: 48%;
 }
 
@@ -79,9 +73,10 @@ div, span, p, a {
     top: 0;
     right: 0px;
     transition: all 0.4s ease;
+    color: var(--secondary)
 }
 
-.a:hover{
+.a:hover {
     transform: scale(1.05);
     color: var(--themecol);
 }
@@ -89,7 +84,7 @@ div, span, p, a {
 .project-link {
     display: flex;
     width: 100%;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 .project-img {
@@ -105,7 +100,7 @@ div, span, p, a {
     padding: 1.2rem;
     padding-top: 0rem;
     position: relative;
-    color: var(--themecol);
+    color: var(--secondary);
     align-self: start;
     width: 100%;
 }
@@ -114,35 +109,42 @@ div, span, p, a {
     padding: 1.2rem;
     padding-top: 0rem;
     position: relative;
-    color: #fff;
+    color: #c7c7c7 !important;
     font-weight: 200;
     width: 100%;
     text-align: left;
 }
 
 .techstack {
-    /* margin: 0.8rem; */
     position: relative;
     display: flex;
     justify-content: left;
     align-items: center;
     flex-wrap: wrap;
     gap: 0.5rem;
-    /* border-top: 1px solid #ffffff9c; */
     padding: 0.8rem;
     width: 100%;
 }
 
-.code {
+.code-b {
     font-family: "Fira Code", monospace;
     font-size: 1rem;
-    background-color: #434340;
+    background: #ff2e7e33;
     border-radius: 7px;
     padding: 0.3rem;
     font-weight: 500;
 }
 
+.code-b .code {
+    color: var(--secondary)
+}
+
+.project-card:hover {
+    transition: all 0.3s ease;
+}
+
 .experience {
+    color: #fff;
     border-radius: 10px;
     background-color: #1b1a1a;
     display: flex;
@@ -197,14 +199,14 @@ div, span, p, a {
     }
 }
 .company {
-    font-weight: 500;
+    font-weight: 700;
     font-size: 1.5rem;
 }
 
 .role {
     font-size: 1.2rem;
     font-weight: 400;
-    color: var(--themecol);
+    color: var(--secondary);
 }
 
 .dates {
@@ -253,7 +255,7 @@ div, span, p, a {
     text-decoration: none;
     font-size: inherit;
     font-weight: inherit;
-    cursor: pointer
+    cursor: pointer;
 }
 
 .website svg {
@@ -267,7 +269,7 @@ div, span, p, a {
     position: relative;
 }
 
-.rating  {
+.rating {
     color: var(--themecol);
     font-size: 4rem;
     font-weight: 700;
@@ -308,8 +310,8 @@ div, span, p, a {
 
 .header-wrapper {
     width: 100%;
-    position: sticky;
-    z-index: 100;
+    position: sticky !important;
+    z-index: 1000000000000;
     top: 0;
 }
 
@@ -339,7 +341,7 @@ div, span, p, a {
 }
 
 .header {
-    background-color: #ffffff00;
+    background-color: #00000090;
     backdrop-filter: blur(10px);
     display: flex;
 }
@@ -372,19 +374,28 @@ div, span, p, a {
 }
 
 .sidebar-icon {
-    color: var(--themecol);
+    color: var(--secondary);
     transition: all 0.3s ease;
     transform: translateX(-40px) scale(0.5);
     animation: iconEntry 0.5s ease-out;
     animation-fill-mode: forwards;
 }
 
-.i1 {animation-delay: 0.5s;}
-.i2 {animation-delay: 0.6s;}
-.i3 {animation-delay: 0.7s;}
-.i4 {animation-delay: 0.8s;}
-.i5 {animation-delay: 0.9s;}
-
+.i1 {
+    animation-delay: 0.5s;
+}
+.i2 {
+    animation-delay: 0.6s;
+}
+.i3 {
+    animation-delay: 0.7s;
+}
+.i4 {
+    animation-delay: 0.8s;
+}
+.i5 {
+    animation-delay: 0.9s;
+}
 
 @keyframes iconEntry {
     50% {
@@ -396,7 +407,7 @@ div, span, p, a {
 }
 
 .side-bar-btn {
-    color: var(--themecol);
+    color: var(--secondary);
     border-radius: 50%;
     background-color: inherit;
     border: none;
@@ -414,7 +425,6 @@ div, span, p, a {
 .side-bar-btn:focus {
     transform: scale(1.2);
 }
-
 
 .side-bar img {
     width: 30px;
@@ -446,7 +456,7 @@ div, span, p, a {
 }
 
 .wrapper .static-txt {
-    color: var(--themecol);
+    color: var(--secondary) !important;
     font-size: 2.7rem;
     font-weight: 600;
 }
@@ -454,31 +464,32 @@ div, span, p, a {
 .wrapper .dynamic-txts {
     line-height: 1.2em;
     height: 1.2em;
-    /* background-color: var(--themecol); */
     font-size: 2.7rem;
     font-weight: 500;
     width: 100%;
     height: 1em !important;
 }
 
-.wrapper .dynamic-txts::after {
-    content: "";
+.wrapper .dynamic-txts:after {
+    content: url('/assets/cursor.svg');
     position: absolute;
+    right: -10px;
+    top: -8px;
     width: 2px;
-    height: 50%;
-    background-color: var(--themecol);
-    /* animation: blinking 1s steps(1) infinite; */
+    height: 100%;
+    transform: scale(2);
+    transform-origin: center;
 }
 
 @keyframes blinking {
-    0%, 100% {
+    0%,
+    100% {
         opacity: 0;
     }
     50% {
         opacity: 1;
     }
 }
-
 
 @media screen and (max-width: 500px) {
     .dynamic-txts {
@@ -487,7 +498,6 @@ div, span, p, a {
     .dynamic-txts::after {
         height: 25%;
     }
-
 }
 
 .button {
@@ -495,6 +505,7 @@ div, span, p, a {
     animation: buttonanimate 0.5s;
     animation-fill-mode: forwards;
     animation-delay: 1s;
+    color: var(--secondary)
 }
 
 @keyframes buttonanimate {
@@ -506,11 +517,7 @@ div, span, p, a {
     }
 }
 
-.cp-card, .experience, .project-card {
-    box-shadow: 0 0 30px 10px hsl(0, 0%, 5%);
-}
-
 .activate {
-    color: #fff;
+    color: var(--primary);
     transform: scale(2.3) !important;
 }

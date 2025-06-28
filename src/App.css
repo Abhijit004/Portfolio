@@ -1,6 +1,24 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.root-content {
+  /* overflow-x: hidden !important; this causes navbar stickiness to loose */
+}
+
+#root .root-content .star {
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#root .root-content .star img {
+    width: 100%;
+}
+
+.credits {
+  color: #ffffff;
+  background-color: transparent !important;
+  position: relative;
+  z-index: -3;
+  display: inline-block !important;
+  margin-top: 3rem;
 }

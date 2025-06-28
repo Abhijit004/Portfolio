@@ -2,11 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import "./components.css";
 import A from "../assets/A.png";
 import CountUp from "react-countup";
-import {
-    Leetcode,
-    Codechef,
-    Codeforces,
-} from "../assets/svgvectors";
+import { Leetcode, Codechef, Codeforces } from "../assets/svgvectors";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAddressBook } from "@fortawesome/free-regular-svg-icons";
 import { faFaceSmile, faPalette, faTrophy, faUserSecret } from "@fortawesome/free-solid-svg-icons";
@@ -66,7 +62,9 @@ export function ProjectCard({ pic, heading, description, link, gitlink, techs })
             <div className="proj-title">
                 {/* <div className="hiderx"></div> */}
                 <div className="bouncer">
-                    <span style={{ color: "var(--themecol)", fontSize: "1.4rem", fontWeight: "600" }}>{heading}</span>
+                    <span style={{ fontSize: "1.4rem", fontWeight: "600" }} className="theme-grad-rev">
+                        {heading}
+                    </span>
                     <a className="a" alt="" href={`${gitlink}`} target="_blank">
                         <FontAwesomeIcon className="a" icon={faGithub} size="1x" />
                     </a>
@@ -82,9 +80,11 @@ export function ProjectCard({ pic, heading, description, link, gitlink, techs })
                 <div className="hiderx"></div>
                 {techs.map((value, index) => {
                     return (
-                        <span key={index} className="code bouncer">
-                            {value}
-                        </span>
+                        <div className="code-b bouncer">
+                            <span key={index} className="code">
+                                {value}
+                            </span>
+                        </div>
                     );
                 })}
             </div>
@@ -99,7 +99,7 @@ export function ExperienceCard({ company, role, daterange, loc, desc }) {
                 <div className="comprole">
                     <div className="hiderx"></div>
                     <div className="company bouncer">{company}</div>
-                    <div className="role bouncer">{role}</div>
+                    <div className="role theme-grad-rev bouncer">{role}</div>
                 </div>
                 <div className="dateloc">
                     <div className="hiderx"></div>
@@ -173,12 +173,12 @@ export function Header() {
                 <div className="contacts">
                     <a aria-label="github" className={"headlogo"} alt="" href="https://github.com/Abhijit004">
                         <div className="social-icon">
-                        <FontAwesomeIcon icon={faGithub} size="2x" />
+                            <FontAwesomeIcon icon={faGithub} size="2x" />
                         </div>
                     </a>
                     <a aria-label="mail" className={"headlogo"} alt="" href="mailto:artistrup07@gmail.com">
                         <div className="social-icon">
-                        <FontAwesomeIcon icon={faEnvelope} size="2x" />
+                            <FontAwesomeIcon icon={faEnvelope} size="2x" />
                         </div>
                     </a>
                     <a
@@ -188,7 +188,7 @@ export function Header() {
                         href="https://www.linkedin.com/in/abhijit-karmakar-009ab026b/"
                     >
                         <div className="social-icon">
-                        <FontAwesomeIcon icon={faLinkedin} size="2x" />
+                            <FontAwesomeIcon icon={faLinkedin} size="2x" />
                         </div>
                     </a>
                 </div>
@@ -212,23 +212,43 @@ export function SideBar({ f1, f2, f3, f4, f5, activate }) {
             </div>
             <div onClick={f1} className="side-bar-btn" aria-label="about">
                 {/* <Info cls="sidebar-icon i1" /> */}
-                <FontAwesomeIcon className={"sidebar-icon i1 " + (activate=="s1"?"activate":"") } icon={faFaceSmile} size="1x" />
+                <FontAwesomeIcon
+                    className={"sidebar-icon i1 " + (activate == "s1" ? "activate" : "")}
+                    icon={faFaceSmile}
+                    size="1x"
+                />
             </div>
             <div onClick={f2} className="side-bar-btn" aria-label="projects">
                 {/* <Projects cls="sidebar-icon i2" /> */}
-                <FontAwesomeIcon className={"sidebar-icon i2 " + (activate=="s2"?"activate":"") } icon={faPalette} size="1x" />
+                <FontAwesomeIcon
+                    className={"sidebar-icon i2 " + (activate == "s2" ? "activate" : "")}
+                    icon={faPalette}
+                    size="1x"
+                />
             </div>
             <div onClick={f3} className="side-bar-btn" aria-label="competitive programming">
                 {/* <CP cls="sidebar-icon i3" /> */}
-                <FontAwesomeIcon className={"sidebar-icon i3 " + (activate=="s3"?"activate":"") } icon={faTrophy} size="1x" />
+                <FontAwesomeIcon
+                    className={"sidebar-icon i3 " + (activate == "s3" ? "activate" : "")}
+                    icon={faTrophy}
+                    size="1x"
+                />
             </div>
             <div onClick={f4} className="side-bar-btn" aria-label="Experience">
                 {/* <Experience cls="sidebar-icon i4" color={"var(--themecol)"} /> */}
-                <FontAwesomeIcon className={"sidebar-icon i4 " + (activate=="s4"?"activate":"") } icon={faUserSecret} size="1x" />
+                <FontAwesomeIcon
+                    className={"sidebar-icon i4 " + (activate == "s4" ? "activate" : "")}
+                    icon={faUserSecret}
+                    size="1x"
+                />
             </div>
             <div onClick={f5} className="side-bar-btn" aria-label="Connect">
                 {/* <Connect cls="sidebar-icon i5" /> */}
-                <FontAwesomeIcon className={"sidebar-icon i5 " + (activate=="s5"?"activate":"") } icon={faAddressBook} size="1x" />
+                <FontAwesomeIcon
+                    className={"sidebar-icon i5 " + (activate == "s5" ? "activate" : "")}
+                    icon={faAddressBook}
+                    size="1x"
+                />
             </div>
         </div>
     );
@@ -271,7 +291,6 @@ const Dynamic = () => {
 export function ChangingTexts() {
     return (
         <div className="wrapper">
-            <div className="static-txt bouncer">I'm a</div>
             <Dynamic />
         </div>
     );

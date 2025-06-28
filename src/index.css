@@ -71,8 +71,8 @@ img::selection, svg::selection {
 .line-r {
     margin-right: 0.5rem;
     width: 0%;
-    height: 1px;
-    background-color: #ffffff57;
+    height: 2px;
+    background: linear-gradient(var(--secondary), var(--themecol));
     position: relative;
     transform-origin: left;
     transition: all 1s ease-out;
@@ -97,7 +97,8 @@ img::selection, svg::selection {
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    background-color: var(--themecol);
+    background-color: #fff;
+    box-shadow: 0 0 20px 7px var(--primary);
 }
 
 .line-r::before {
@@ -215,6 +216,20 @@ img::selection, svg::selection {
     background-clip: text !important;
     color: transparent !important;
     width: max-content;
+}
+
+.theme-grad-rev:before, .theme-grad:before {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, #ff2d7e, #9C2CFC) !important;
+    position: absolute;
+    bottom: -2px;
+    transition: all 0.2s ease-in;
+}
+
+.theme-grad-rev:hover:before, .theme-grad:hover:before {
+    width: 100px;
 }
 
 .sections {

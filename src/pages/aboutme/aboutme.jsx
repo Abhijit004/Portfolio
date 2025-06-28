@@ -1,21 +1,21 @@
 import React, { useEffect, useRef } from "react";
 import "./aboutme.css";
-import * as SVG from "../../assets/svgvectors";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faCss3Alt,
-    faFigma,
-    faGitAlt,
-    faGithub,
-    faHtml5,
-    faJava,
-    faJs,
-    faNodeJs,
-    faPython,
-    faReact,
-} from "@fortawesome/free-brands-svg-icons";
-import { faC } from "@fortawesome/free-solid-svg-icons";
-import TechStack from "../../components/TechStack/TechStack";
+// import * as SVG from "../../assets/svgvectors";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import {
+//     faCss3Alt,
+//     faFigma,
+//     faGitAlt,
+//     faGithub,
+//     faHtml5,
+//     faJava,
+//     faJs,
+//     faNodeJs,
+//     faPython,
+//     faReact,
+// } from "@fortawesome/free-brands-svg-icons";
+// import { faC, faWeight } from "@fortawesome/free-solid-svg-icons";
+// import TechStack from "../../components/TechStack/TechStack";
 
 function AboutMe() {
     const observer = useRef(null);
@@ -46,6 +46,7 @@ function AboutMe() {
             }
         });
     };
+    const style = { color: "var(--secondary)"};
     return (
         <div className="about-me sec s1">
             <div>
@@ -60,29 +61,27 @@ function AboutMe() {
                         <div className="para">
                             <div className="hiderx"></div>
                             <p className="bouncer">
-                                I am currently pursuing a B.Tech in Information Technology from IIEST, Shibpur, and I am
-                                in my third year. My journey in development started with self-learning, and over time, I
-                                have led multiple projects that have strengthened my problem-solving and technical
-                                expertise.
+                                I am currently pursuing a <span style={style}>B.Tech in Information Technology</span> from IIEST, Shibpur, and will
+                                be starting my <span style={style}>4th year</span>. My journey in development started with self-learning, and over
+                                time, I have led multiple projects that have strengthened my problem-solving and
+                                technical expertise.
                             </p>
                         </div>
                         <div className="para">
                             <div className="hiderx"></div>
                             <p className="bouncer">
                                 As a passionate web developer, I specialize in building intuitive and user-friendly
-                                interfaces. I primarily use Figma for UI/UX brainstorming and design. I work extensively
-                                with React, along with Material UI and Ant Design. I have led the design and development
-                                of websites for college fests like Instruo and Rebeca, integrating advanced frontend
-                                techniques.
+                                interfaces. I primarily use <span style={style}>Figma</span> for UI/UX brainstorming and
+                                design. I work extensively with <span style={style}>React</span>, along with <span style={style}>Material UI</span> and <span style={style}>Ant Design</span>. I have led
+                                the design and development of websites for college fests like Instruo and Rebeca,
+                                integrating advanced frontend techniques.
                             </p>
                         </div>
                         <div className="para">
                             <div className="hiderx"></div>
                             <p className="bouncer">
-                                Beyond web development, I have a strong passion for competitive programming and
-                                problem-solving (Recently competed in the ICPC Amritapuri Regionals!). Python is my
-                                go-to language for its simplicity. Additionally, I mentor aspiring developers and have
-                                conducted sessions on Git, GitHub, and frontend development.
+                                Beyond web development, I have a strong passion for <span style={style}>competitive programming</span> and problem-solving. <span style={style}>Python</span> is my go-to language for its simplicity. Additionally, I mentor aspiring developers and have
+                                conducted sessions on <span style={style}>Git</span>, <span style={style}>GitHub</span>, and <span style={style}>frontend development</span>.
                             </p>
                         </div>
                     </div>

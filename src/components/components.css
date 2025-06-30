@@ -55,7 +55,7 @@
 }
 
 .project-card {
-    background-color: #1b1a1a;
+    background-color: #ffffff13;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -146,7 +146,7 @@
 .experience {
     color: #fff;
     border-radius: 10px;
-    background-color: #1b1a1a;
+    background-color: #ffffff13;
     display: flex;
     justify-content: center;
     /* align-items: center; */
@@ -232,7 +232,7 @@
     align-items: center;
     flex-direction: column;
     padding: 1rem;
-    background-color: #1b1a1a;
+    background-color: #ffffff;
     border-radius: 10px;
     position: relative;
     width: 15rem;
@@ -363,7 +363,7 @@
     top: 0;
     height: 100vh;
     width: max-content;
-    background-color: hsl(0, 0%, 4%);
+    background-color: hsla(0, 0%, 20%, 0.473);
     display: flex;
     justify-content: start;
     align-items: center;

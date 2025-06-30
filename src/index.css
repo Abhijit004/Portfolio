@@ -19,7 +19,7 @@
 }
 
 body {
-    background-color: #000000;
+    background-color: hsl(337, 100%, 2%);
     overflow-x: hidden;
     height: 100vh;
 }
@@ -118,7 +118,7 @@ img::selection, svg::selection {
     }
 
     .heading {
-        display: block;
+        /* display: block; */
     }
 
     /* .line,

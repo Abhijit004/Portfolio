@@ -121,10 +121,10 @@ img::selection, svg::selection {
         display: block;
     }
 
-    .line,
+    /* .line,
     .line-r {
         display: none;
-    }
+    } */
 }
 
 .hiderx {

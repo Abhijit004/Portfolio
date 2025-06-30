@@ -1,24 +1,33 @@
 .root-content {
-  /* overflow-x: hidden !important; this causes navbar stickiness to loose */
+    /* overflow-x: hidden !important; this causes navbar stickiness to loose */
 }
 
-#root .root-content .star {
+#root .star {
+	/* display: none; */
     width: 100vw;
     position: absolute;
     top: 0;
-    left: 50%;
-    transform: translate(-50%);
 }
 
-#root .root-content .star img {
+#root .star img {
     width: 100%;
 }
 
 .credits {
-  color: #ffffff;
-  background-color: transparent !important;
-  position: relative;
-  z-index: -3;
-  display: inline-block !important;
-  margin-top: 3rem;
+    color: #ffffff;
+    background-color: transparent !important;
+    position: relative;
+    z-index: -3;
+    display: inline-block !important;
+    margin-top: 3rem;
+}
+
+@media screen and (max-width: 550px) {
+    #root {
+        grid-template-columns: 1fr;
+    }
+
+    .side-bar {
+        display: none;
+    }
 }

@@ -31,7 +31,6 @@
 
 .hero .hero-container .name .img {
     width: min(700px, 80vw);
-    /* animation: float; */
     animation: float 2s ease-in infinite 1.5s, myName 1s ease-in;
 }
 

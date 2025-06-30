@@ -107,15 +107,15 @@ function App() {
     };
     return (
         <>
+            <div className="star">
+                <img src={star} />
+            </div>
             <SideBar f1={goabout} f2={goprojects} f3={gocpstats} f4={goexp} f5={gocontact} activate={active} />
             <div className="root-content">
                 <Header />
-                <div className="star">
-                    <img src={star} />
-                </div>
+                {/* <HomePage /> */}
+                <Hero />
                 <div className="sections">
-                    {/* <HomePage /> */}
-                    <Hero />
                     <div ref={about}>
                         <AboutMe />
                     </div>

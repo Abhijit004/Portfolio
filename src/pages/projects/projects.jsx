@@ -54,7 +54,7 @@ function Projects() {
                 />
                 <ProjectCard
                     techs={["CSS", "HTML", "Javascript", "React"]}
-                    pic={"proj-portfolio.webp"}
+                    pic={"portfolio.png"}
                     heading={"Portfolio"}
                     description={portfolio}
                     link={"https://abhijit-karmakar.vercel.app/"}

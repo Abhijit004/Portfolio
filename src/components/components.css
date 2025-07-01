@@ -374,6 +374,7 @@
 }
 
 .sidebar-icon {
+    background-color: transparent;
     color: var(--secondary);
     transition: all 0.3s ease;
     transform: translateX(-40px) scale(0.5);
@@ -418,13 +419,11 @@
     align-items: center;
 }
 
-.side-bar-btn:hover {
-    transform: scale(1.2);
-}
-
+.side-bar-btn:hover,
 .side-bar-btn:focus {
     transform: scale(1.2);
 }
+
 
 .side-bar img {
     width: 30px;
@@ -518,6 +517,9 @@
 }
 
 .activate {
-    color: var(--primary);
-    transform: scale(2.3) !important;
+    color: #fff;
+    background-color: #ff2d7d77;
+    border-radius: 50%;
+    transform: scale(2) !important;
+    box-shadow: 0 0 10px 2px var(--secondary);
 }

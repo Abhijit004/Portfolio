@@ -10,6 +10,8 @@ var codeiiest =
 
 var mentorexp = "Mentored in a web development bootcamp, mainly in frontend development. Conducted multiple online sessions where I guided participants through live project builds, offering hands-on experience and practical insights into development processes."
 
+var accenture = "As an Advanced Application Engineering Intern at Accenture, I developed an Angular web app with JWT authentication, routing, and dependency injection, then integrated it with a MERN backend (MongoDB Atlas) for full CRUD operations and seamless communication. Additionally, I designed and tested RESTful APIs using ASP.NET Core and C#, applying OOP principles."
+
 export default function Experience() {
     return (
         <div className="experience-section sec s4">
@@ -20,6 +22,13 @@ export default function Experience() {
                 <div className="line-r"></div>
             </div>
             <div className="exp-list">
+                <ExperienceCard
+                    company={"Accenture"}
+                    role={"AEH Intern"}
+                    daterange={"May 2025 - July 2025"}
+                    loc={"Bangalore"}
+                    desc={accenture}
+                />
                 <ExperienceCard
                     company={"DevCamp"}
                     role={"Mentor"}

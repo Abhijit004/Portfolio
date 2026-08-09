@@ -10,6 +10,7 @@
     --themecol: #7451f0;
     --primary: var(--themecol);
     --secondary: #ff2d7e;
+    --text-secondary: #ff2d7e;
 }
 
 .heading span{

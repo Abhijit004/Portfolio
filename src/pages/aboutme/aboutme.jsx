@@ -43,7 +43,7 @@ function AboutMe() {
             }
         });
     };
-    const style = { color: "var(--secondary)"};
+    const style = { color: "var(--text-secondary)", fontWeight: 400};
     return (
         <div className="about-me sec s1">
             <div>
@@ -58,27 +58,19 @@ function AboutMe() {
                         <div className="para">
                             <div className="hiderx"></div>
                             <p className="bouncer">
-                                I am currently pursuing a <span style={style}>B.Tech in Information Technology</span> from IIEST, Shibpur, and will
-                                be starting my <span style={style}>4th year</span>. My journey in development started with self-learning, and over
-                                time, I have led multiple projects that have strengthened my problem-solving and
-                                technical expertise.
+                                I finished my <span style={style}>B.Tech degree in Information Technology at IIEST Shibpur</span>. As a crazy Software Engineer, I love building scalable apps and tackling complex challenges across full-stack dev and machine learning. My core technical experience spans building secure, responsive web apps and RESTful services using <span style={style}>React</span>, <span style={style}>Angular</span>, <span style={style}>Node.js</span>, <span style={style}>Express</span>, and <span style={style}>MongoDB</span>.
                             </p>
                         </div>
                         <div className="para">
                             <div className="hiderx"></div>
                             <p className="bouncer">
-                                As a passionate web developer, I specialize in building intuitive and user-friendly
-                                interfaces. I primarily use <span style={style}>Figma</span> for UI/UX brainstorming and
-                                design. I work extensively with <span style={style}>React</span>, along with <span style={style}>Material UI</span> and <span style={style}>Ant Design</span>. I have led
-                                the design and development of websites for college fests like Instruo and Rebeca,
-                                integrating advanced frontend techniques.
+                                I've also explored <span style={style}>Deepfake detection</span> and <span style={style}>Continual Learning</span> working with Transformer architectures, Mixture-of-Experts, and PyTorch. I also love giving back to the community—during my time leading development initiatives at CodeIIEST, I conducted technical sessions and organized competitive coding events.
                             </p>
                         </div>
                         <div className="para">
                             <div className="hiderx"></div>
                             <p className="bouncer">
-                                Beyond web development, I have a strong passion for <span style={style}>competitive programming</span> and problem-solving. <span style={style}>Python</span> is my go-to language for its simplicity. Additionally, I mentor aspiring developers and have
-                                conducted sessions on <span style={style}>Git</span>, <span style={style}>GitHub</span>, and <span style={style}>frontend development</span>.
+                                Beyond web development, I have a strong passion for <span style={style}>competitive programming</span> and problem-solving. <span style={style}>Python</span> is my go-to language for its simplicity. Off the clock, you can find me doing speedcubing, drawing, or travelling with my friends around the world!
                             </p>
                         </div>
                     </div>

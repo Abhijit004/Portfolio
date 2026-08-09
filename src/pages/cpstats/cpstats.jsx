@@ -36,9 +36,9 @@ export default function CPStats() {
                     link={"https://codeforces.com/profile/abhijit07cf"}
                 /> */}
 
-                <CoderCard2 pt={"leetcode"} link={"https://leetcode.com/__Abhijit__/"} rank={792} rating={1912} solved={1002} key={1} handle='__Abhijit__'/>
-                <CoderCard2 pt={"codechef"} link={"https://www.codechef.com/users/chefabhijit07"} rank={46} rating={1743} solved={286} key={2} handle='chefabhijit07'/>
-                <CoderCard2 pt={"codeforces"} link={"https://codeforces.com/profile/abhijit07cf"} rank={857} rating={1440} solved={491} key={3} handle='abhijit07cf' />
+                <CoderCard2 pt={"leetcode"} link={"https://leetcode.com/__Abhijit__/"} rank={792} rating={1932} solved={1078} key={1} handle='__Abhijit__'/>
+                <CoderCard2 pt={"codechef"} link={"https://www.codechef.com/users/chefabhijit07"} rank={46} rating={1774} solved={305} key={2} handle='chefabhijit07'/>
+                <CoderCard2 pt={"codeforces"} link={"https://codeforces.com/profile/abhijit07cf"} rank={857} rating={1445} solved={542} key={3} handle='abhijit07cf' />
                 <ExperienceCard
                     company={"ICPC"}
                     role={"Team ERROR404"}

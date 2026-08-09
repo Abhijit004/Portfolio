@@ -12,6 +12,8 @@ var mentorexp = "Mentored in a web development bootcamp, mainly in frontend deve
 
 var accenture = "As an Advanced Application Engineering Intern at Accenture, I developed an Angular web app with JWT authentication, routing, and dependency injection, then integrated it with a MERN backend (MongoDB Atlas) for full CRUD operations and seamless communication. Additionally, I designed and tested RESTful APIs using ASP.NET Core and C#, applying OOP principles."
 
+var accenture_fulltime = "Happy to have received a Pre-Placement offer from Accenture after my internship. Excited to see what lies ahead!"
+
 export default function Experience() {
     return (
         <div className="experience-section sec s4">
@@ -22,6 +24,13 @@ export default function Experience() {
                 <div className="line-r"></div>
             </div>
             <div className="exp-list">
+                <ExperienceCard
+                    company={"Accenture"}
+                    role={"SWE Analyst"}
+                    daterange={"July 2026 - Present"}
+                    loc={"Kolkata"}
+                    desc={accenture_fulltime}
+                />
                 <ExperienceCard
                     company={"Accenture"}
                     role={"AEH Intern"}

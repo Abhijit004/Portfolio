@@ -53,6 +53,77 @@ export function Button({ text }) {
     );
 }
 
+const TECH_STYLES = {
+    html: {
+      bg: 'rgba(244, 67, 54, 0.3)',
+      text: '#f44336'
+    },
+    'ant design': {
+      bg: 'rgba(244, 67, 54, 0.3)',
+      text: '#f44336'
+    },
+    mui: {
+      bg: 'rgba(244, 67, 54, 0.3)',
+      text: '#f44336'
+    },
+    css: {
+      bg: 'rgba(30, 136, 229, 0.3)',
+      text: '#1e88e5'
+    },
+    javascript: {
+      bg: 'rgba(251, 192, 45, 0.3)',
+      text: '#fbc02d'
+    },
+    js: {
+      bg: 'rgba(251, 192, 45, 0.3)',
+      text: '#fbc02d'
+    },
+    typescript: {
+      bg: 'rgba(63, 81, 181, 0.3)',
+      text: '#3f51b5'
+    },
+    react: {
+      bg: 'rgba(0, 188, 212, 0.3)',
+      text: '#00bcd4'
+    },
+    api: {
+      bg: 'rgba(0, 188, 212, 0.3)',
+      text: '#00bcd4'
+    },
+    node: {
+      bg: 'rgba(76, 175, 80, 0.3)',
+      text: '#4caf50'
+    },
+    mongodb: {
+      bg: 'rgba(76, 175, 80, 0.3)',
+      text: '#4caf50'
+    },
+    figma: {
+      bg: 'rgba(76, 175, 80, 0.3)',
+      text: '#4caf50'
+    },
+    python: {
+      bg: 'rgba(251, 192, 45, 0.3)',
+      text: '#fbc02d'
+    },
+    // Default fallback style for unknown tech stacks
+    default: {
+      bg: 'rgba(221, 51, 250, 0.3)',
+      text: '#dd33fa'
+    }
+  };
+
+const TechStack = ({key, value}) => {
+    const theme = TECH_STYLES[value.toLowerCase()] || TECH_STYLES['default']
+    return (
+        <div key={key} className="bouncer code-b" style={{backgroundColor: theme.bg, color: theme.text}}>
+            <span className="code" style={{color: 'inherit'}}>
+                {value}
+            </span>
+        </div>
+    );
+}
+
 export function ProjectCard({ pic, heading, description, link, gitlink, techs }) {
     return (
         <div className="project-card">
@@ -78,13 +149,9 @@ export function ProjectCard({ pic, heading, description, link, gitlink, techs })
             </div>
             <div className="techstack">
                 <div className="hiderx"></div>
-                {techs.map((value, index) => {
+                {techs.map((value, key) => {
                     return (
-                        <div className="code-b bouncer">
-                            <span key={index} className="code">
-                                {value}
-                            </span>
-                        </div>
+                        <TechStack key={key} value={value}/>
                     );
                 })}
             </div>

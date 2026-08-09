@@ -26,7 +26,7 @@ export default function Experience() {
             <div className="exp-list">
                 <ExperienceCard
                     company={"Accenture"}
-                    role={"SWE Analyst"}
+                    role={"SWE Analyst - FullTime"}
                     daterange={"July 2026 - Present"}
                     loc={"Kolkata"}
                     desc={accenture_fulltime}

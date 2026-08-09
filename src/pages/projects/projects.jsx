@@ -12,7 +12,7 @@ var portfolio =
 var cpdsa =
     "Designed and co-developed a website that attracted over 650 unique IP addresses and over 2,000 page visits within seven days of its launch (as per Vercel analytics).";
 var calculator =
-    "A basic calculator with glassmorphism UI, using only plain HTML, CSS and Vanilla Javascript. Provided light and dark mode features to enhance user experience.";
+    "My first web dev project! A basic calculator with glassmorphism UI, using only plain HTML, CSS and Vanilla Javascript. Provided light and dark mode features to enhance user experience.";
 var rebeca = "Developed authentication for Rebeca fest website, implementing Google login for IIESTians and a passkey-based access system. Managed client, server, and admin modules for user registration and event management."
 
 var instruo = "Led the complete design and development of the Instruo website, focusing on an intuitive UI/UX and seamless event interactions to enhance the fest experience, which featured 20+ events and 100+ participations accross all events."

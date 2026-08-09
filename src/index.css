@@ -194,7 +194,11 @@ img::selection, svg::selection {
 }
 
 .credits {
-    opacity: 0.8
+    opacity: 0.8;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: 2.5rem
 }
 
 .credits a {
@@ -229,7 +233,7 @@ img::selection, svg::selection {
     transition: all 0.2s ease-in;
 }
 
-.theme-grad-rev:hover:before, .theme-grad:hover:before {
+.theme-grad-rev:hover:before {
     width: 100px;
 }
 

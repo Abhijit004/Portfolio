@@ -64,7 +64,6 @@ const platform = {
 };
 
 const CoderCard2 = ({ pt, rating, rank, solved, link, handle }) => {
-    console.log(pt);
     const style = { color: platform[pt].primary };
 
     return (

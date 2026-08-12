@@ -10,6 +10,7 @@ import "./App.css";
 import Contact from "./pages/contact/contact.jsx";
 import Hero from "./pages/Hero/Hero.jsx";
 import star from "/assets/star.svg";
+import SmoothScroll from "./SmoothScroll.jsx";
 
 function App() {
     const [observer, lineController, text, section] = [useRef(null), useRef(null), useRef(null), useRef(null)];
@@ -112,6 +113,7 @@ function App() {
             </div>
             <SideBar f1={goabout} f2={goprojects} f3={gocpstats} f4={goexp} f5={gocontact} activate={active} />
             <div className="root-content">
+                <SmoothScroll>
                 <Header />
                 {/* <HomePage /> */}
                 <Hero />
@@ -138,6 +140,7 @@ function App() {
                         </a>
                     </span>
                 </div>
+                </SmoothScroll>
             </div>
         </>
     );

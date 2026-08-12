@@ -113,8 +113,8 @@ function App() {
             </div>
             <SideBar f1={goabout} f2={goprojects} f3={gocpstats} f4={goexp} f5={gocontact} activate={active} />
             <div className="root-content">
-                <SmoothScroll>
                 <Header />
+                <SmoothScroll>
                 {/* <HomePage /> */}
                 <Hero />
                 <div className="sections">

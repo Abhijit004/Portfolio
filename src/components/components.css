@@ -310,7 +310,7 @@
 .header-wrapper {
     width: 100%;
     position: sticky !important;
-    z-index: 1000000000000;
+    z-index: 1000;
     top: 0;
 }
 
@@ -343,6 +343,9 @@
     background-color: #00000090;
     backdrop-filter: blur(10px);
     display: flex;
+    width: 100%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 
 .contacts {
